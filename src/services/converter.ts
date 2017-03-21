@@ -1,0 +1,33 @@
+import { Injectable } from '@angular/core';
+import { Http, Headers, Response } from "@angular/http";
+import 'rxjs/Rx';
+import { Observable } from "rxjs";
+
+@Injectable()
+export class ConvertedService {
+    urlLocalhost: string = "http://ergast.com/api/f1/";
+    allf1SeasonsURL: string = this.urlLocalhost + "seasons.json?limit=100";
+    driverSelectYearUrl: string = this.urlLocalhost;
+    constructor(private _http: Http) { }
+
+    //World championship drivers http://ergast.com/api/f1
+    //Check select driver world champion: http://ergast.com/api/f1/driverStandings/1/drivers/<driverId>
+    findF1SeasonsList() //GET
+    {
+      return this.getRequest(this.allf1SeasonsURL);
+    }
+
+    //Function to make GET Requests
+    getRequest(url)
+    {
+      console.log(url);
+      return this._http.get(url)
+          .map(response => {
+              { return response.json() };
+          })
+          .catch(error => Observable.throw(error.json()));
+    }
+
+    //Function to make POST Requests
+
+}
