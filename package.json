@@ -1,6 +1,6 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
+  "name": "run-calculator-plus",
+  "author": "Anartz Mugika Ledo",
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
@@ -40,5 +40,5 @@
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],
-  "description": "Converter: An Ionic project"
+  "description": "Run Calculator Plus: New version of Runnin Calculator"
 }
