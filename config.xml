@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.anartz.korrikakonbertidorea" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.github.mugan86.runcalculator" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Running Calculator Plus</name>
   <description>New version of Run Calculator with new options.</description>
   <author email="mugan86@gmail.com" href="http://ionicframework.com/">Ionic Framework Team</author>
