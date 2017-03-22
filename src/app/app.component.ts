@@ -7,6 +7,7 @@ import { Page2 } from '../pages/page2/page2';
 
 
 @Component({
+  selector: 'app-page',
   templateUrl: 'app.html'
 })
 export class MyApp {
