@@ -8,10 +8,15 @@ import { RunConverter } from '../../models/run-converter';
   templateUrl: 'page1.html'
 })
 export class Page1 {
-
+  converter: RunConverter;
   constructor(public navCtrl: NavController) {
-    let converter = new RunConverter();
-    console.log("17.9 km/h = " + converter.KilometersPerHourToPaceMinKm(17.9)  + " min/km");
+     this.converter= new RunConverter();
+    console.log("17.9 km/h = " + this.converter.KilometersPerHourToPaceMinKm(17.9)  + " min/km");
+  }
+
+  makeBasicConversion()
+  {
+    console.log("21.1 km/h = " + this.converter.KilometersPerHourToPaceMinKm(21.1)  + " min/km");
   }
 
 
