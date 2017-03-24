@@ -22,6 +22,6 @@ import { ConvertedService } from "./../services/converter";
     Page1,
     Page2, Page3
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ConvertedService]
 })
 export class AppModule {}
