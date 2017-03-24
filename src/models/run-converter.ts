@@ -60,12 +60,6 @@ export class RunConverter
     MetersMinuteToKilometersPerHour(speed_m_min: number) {
         if (speed_m_min <= 0) return "Stop situation";
 
-        console.log(speed_m_min);
-
-        console.info("Meters/s en km/h: " + (speed_m_min*60) / 1000);
-
-
-
         return this.GetDoubleValue(String((speed_m_min*60) / 1000), 2);
     }
 
