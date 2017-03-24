@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from "@angular/http";
 import 'rxjs/Rx';
 import { Observable } from "rxjs";
+import { RunConverter } from '../models';
 
 @Injectable()
 export class ConvertedService {
