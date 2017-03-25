@@ -1,5 +1,5 @@
 //our root app component
-import {Component, Directive, Output, EventEmitter, Input, SimpleChange} from '@angular/core'
+import {Directive, Output, Input} from '@angular/core'
 import {Observable} from 'rxjs/Observable';
 import {Observer} from 'rxjs/Observer';
 import 'rxjs/Rx';
