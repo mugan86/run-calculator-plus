@@ -9,24 +9,16 @@ export class RunConverter
         //Get pace minutes and seconds
         let min_sc_km:number = 60 / speed_km_h;
 
-        console.log(min_sc_km);
-
         //Convert String
         let result_str:string = String(min_sc_km);
 
-        console.log(result_str);
-
         //Get decimal value
         let index: number = result_str.indexOf(".");
-
-        console.log("INDEX: " + index);
 
         //Get only pace minutes
 
         let min_pace: number = min_sc_km;
         if (index != -1)  min_pace = this.RemoveDecimalValue(min_sc_km);
-
-        console.log(min_pace);
 
         //Get only pace seconds
         let sec_pace: number = 0;
