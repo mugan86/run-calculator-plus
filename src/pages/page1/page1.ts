@@ -18,8 +18,4 @@ export class Page1 {
   {
     console.log("21.1 km/h = " + this.converter.KilometersPerHourToPaceMinKm(21.1)  + " min/km");
   }
-
-
-
-
 }
