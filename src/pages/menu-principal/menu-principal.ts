@@ -9,9 +9,11 @@ import { RunConverter } from '../../models/run-converter';
 })
 export class MenuPrincipal {
   converter: RunConverter;
+  convertions = [{icon: 'iii', label: 'Kms'}];
   constructor(public navCtrl: NavController) {
      this.converter= new RunConverter();
     console.log("17.9 km/h = " + this.converter.KilometersPerHourToPaceMinKm(17.9)  + " min/km");
+    console.log(this.convertions[0].icon);
   }
 
   makeBasicConversion()
