@@ -20,4 +20,12 @@ export class Page1 {
   {
     console.log("21.1 km/h = " + this.converter.KilometersPerHourToPaceMinKm(21.1)  + " min/km");
   }
+
+  changeLanguage (newLanguage: string) {
+		this.translate.use(newLanguage).subscribe(ready => {
+			//this.updateVariables();
+      console.log("Select language is: " + newLanguage);
+      localStorage.setItem('selectLanguage', newLanguage);
+		});
+	}
 }
