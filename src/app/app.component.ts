@@ -19,6 +19,19 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform) {
+
+    /*************************************************************************
+    Check if language select, if not select nothing, set 'en'
+    *************************************************************************/
+
+    console.info("Select language: " + localStorage.getItem('selectLanguage'));
+    if (localStorage.getItem('selectLanguage') == null || localStorage.getItem('selectLanguage') == "null")
+    {
+      localStorage.setItem('selectLanguage', 'en');
+      console.info("Change language to " + localStorage.getItem('selectLanguage'));
+    }
+
+    //Start app
     this.initializeApp();
 
     // used for an example of ngFor and navigation
