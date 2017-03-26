@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { Http } from "@angular/http";
 import 'rxjs/Rx';
 import { Observable } from "rxjs";
-import { RunConverter } from '../models';
+import { RunConverter } from '../models/run-converter';
 
 @Injectable()
 export class ConvertedService {
     urlLocalhost: string = "http://ergast.com/api/f1/";
     allf1SeasonsURL: string = this.urlLocalhost + "seasons.json?limit=100";
     driverSelectYearUrl: string = this.urlLocalhost;
+
+    converter: RunConverter;
     constructor(private _http: Http) { }
 
     //World championship drivers http://ergast.com/api/f1
