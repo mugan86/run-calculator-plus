@@ -1,6 +1,10 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
+import { TranslateModule, TranslateLoader } from 'ng2-translate/ng2-translate';
+import { createTranslateLoader } from './../services/translate-loader';
+import { Http } from '@angular/http';
+
 import { MyApp } from './app.component';
 
 //Pages
@@ -24,7 +28,12 @@ import { ConvertedService } from "./../services/converter";
     MenuPrincipal, DefaultImage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (createTranslateLoader),
+      deps: [Http]
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
