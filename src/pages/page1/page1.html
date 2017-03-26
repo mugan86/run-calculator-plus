@@ -21,6 +21,18 @@
   <button ion-button color="twitter" full>Show Local Notification</button>
   <button ion-button color="primary" full>Full Button</button>
 
+  <div text-center>
+    <button ion-button round full (click)='changeLanguage("eu")'>
+      Euskara
+    </button>
+    <button ion-button round full (click)='changeLanguage("es")'>
+      Español
+    </button>
+    <button ion-button round full (click)='changeLanguage("en")'>
+      English
+    </button>
+  </div>
+
   <ion-fab right bottom>
   <button ion-fab color="twitter"><ion-icon name="arrow-dropleft"></ion-icon></button>
   <ion-fab-list side="left">
