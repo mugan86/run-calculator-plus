@@ -1,4 +1,11 @@
 {
 	"TITLE": "Calculadora Run :)",
-	"INTRO_TEXT": "This text use to intro ;)"
+	"INTRO_TEXT": "This text use to intro ;)",
+	"APP_NAME": "RunCalculator Plus",
+	"ABOUT_APP": "Programa creado por Anartz Mugika. Puedes contactar conmigo de diferentes maneras que muestro a continuación:",
+	"SETTINGS": "Configuración",
+	"INTRO": "Run Calculator Plus Menu",
+	"GET_KMS": "Obtener kms",
+	"GET_PACE": "Obtener ritmo",
+	"GET_TIME": "Obtener tiempo"
 }
