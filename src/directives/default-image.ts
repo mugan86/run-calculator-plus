@@ -1,5 +1,5 @@
 //our root app component
-import {Directive, Output, Input} from '@angular/core'
+import {Component, Directive, Output, EventEmitter, Input, SimpleChange} from '@angular/core'
 import {Observable} from 'rxjs/Observable';
 import {Observer} from 'rxjs/Observer';
 import 'rxjs/Rx';
@@ -14,9 +14,10 @@ import 'rxjs/Rx';
 export class DefaultImage {
   @Input() src:string;
   //Add default image to show if not load correct select src
-  @Input() default:string = "./assets/img/icons/birthday.png";
+  @Input() default:string = "./../../assets/visa.png";
 
   updateUrl() {
+    console.log("Error in load image");
     this.src = this.default;
   }
 }
