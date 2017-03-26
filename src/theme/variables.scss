@@ -78,10 +78,4 @@ $colors: (
 @import "roboto";
 @import "noto-sans";
 
-
-// CUstom styles
-
-ion-header
-{
-    background: #e19 !important;
-}
+@import "../pages/page1/page1.scss";
