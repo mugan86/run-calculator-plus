@@ -7,5 +7,9 @@
 	"INTRO": "Run Calculator Plus Menu",
 	"GET_KMS": "Obtener kms",
 	"GET_PACE": "Obtener ritmo",
-	"GET_TIME": "Obtener tiempo"
+	"GET_TIME": "Obtener tiempo",
+	"CLOSE_APP_COMPLETE": "Salir de la aplicación",
+	"CLOSE": "Salir",
+	"ABOUT INFO": "Acerca de",
+	"INPUT_KM_NUMBER": "Introduzca el números de kms: "
 }
