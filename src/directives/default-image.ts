@@ -17,7 +17,6 @@ export class DefaultImage {
   @Input() default:string = "./../../assets/visa.png";
 
   updateUrl() {
-    console.log("Error in load image");
     this.src = this.default;
   }
 }
