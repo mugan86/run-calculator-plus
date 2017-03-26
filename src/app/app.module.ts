@@ -21,7 +21,7 @@ import { ConvertedService } from "./../services/converter";
     Page1,
     Page2,
     Page3,
-    MenuPrincipal
+    MenuPrincipal, DefaultImage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
