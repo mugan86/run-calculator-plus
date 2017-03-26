@@ -13,11 +13,14 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
   </p>
+  <img src="./../../assets/visa.png"  width="100px" >
+  <img [src]="'./../../fff/visa.png'" default="https://placehold.it/100x100" width = "100px">
 
   <button ion-button secondary menuToggle>Open converter options</button>
   <button ion-button color="twitter" (click)="makeBasicConversion()">I'm a button</button>
   <button ion-button color="twitter" full>Show Local Notification</button>
   <button ion-button color="primary" full>Full Button</button>
+
   <ion-fab right bottom>
   <button ion-fab color="twitter"><ion-icon name="arrow-dropleft"></ion-icon></button>
   <ion-fab-list side="left">
