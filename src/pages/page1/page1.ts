@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { RunConverter } from '../../models/run-converter';
+import { TranslateService, LangChangeEvent } from 'ng2-translate';
 
 @Component({
   selector: 'page-page1',
@@ -9,8 +10,9 @@ import { RunConverter } from '../../models/run-converter';
 })
 export class Page1 {
   converter: RunConverter;
-  constructor(public navCtrl: NavController) {
-     this.converter= new RunConverter();
+  constructor(public navCtrl: NavController, public translate: TranslateService) {
+    translate.setDefaultLang(localStorage.getItem('selectLanguage'));
+    this.converter= new RunConverter();
     console.log("17.9 km/h = " + this.converter.KilometersPerHourToPaceMinKm(17.9)  + " min/km");
   }
 
