@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { RunConverter } from '../../models/run-converter';
-import { TranslateService, LangChangeEvent } from 'ng2-translate';
+import { TranslateService } from 'ng2-translate';
 
 @Component({
   selector: 'page-page1',
