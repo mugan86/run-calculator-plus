@@ -1,4 +1,20 @@
 {
 	"TITLE": "Korrika :)",
-	"INTRO_TEXT": "This text use to intro ;)"
+	"INTRO_TEXT": "This text use to intro ;)",
+	"APP_NAME": "RunCalculator Plus",
+	"ABOUT_APP": "Programa creado por Anartz Mugika. Puedes contactar conmigo de diferentes maneras que muestro a continuación:",
+	"SETTINGS": "Configuración",
+	"AVAILABLE_CONVERSIONS_IN_APP": "Conversiones disponibles",
+	"INTRO": "Run Calculator Plus Menu",
+	"GET_KMS": "Obtener kms",
+	"GET_PACE": "Obtener ritmo",
+	"GET_TIME": "Obtener tiempo",
+	"CLOSE_APP_COMPLETE": "Salir de la aplicación",
+	"CLOSE": "Salir",
+	"ABOUT_INFO": "Acerca de",
+	"INPUT_KM_NUMBER": "Introduzca el números de kms: ",
+	"KM_LABEL": "KM",
+	"PACE_MIN_KM_LABEL": "min/km",
+	"TWO_POINTS": " : ",
+	"INPUT_PACE_MIN_KM": "Introduzca el ritmo medio: "
 }
