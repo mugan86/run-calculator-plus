@@ -16,7 +16,7 @@ export class MyApp {
 
   rootPage: any = Page1;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(public platform: Platform) {
 
@@ -36,9 +36,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'TITLE', component: MenuPrincipal },
-      { title: 'GET_KMS', component: Page1 },
-      { title: 'SETTINGS', component: Page2 },
+      { title: 'TITLE', component: MenuPrincipal, icon: 'md-home' },
+      { title: 'GET_KMS', component: Page1, icon: 'md-calculator' },
+      { title: 'SETTINGS', component: Page2, icon: 'md-mail'},
 
     ];
 
