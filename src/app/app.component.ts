@@ -38,6 +38,7 @@ export class MyApp {
     this.pages = [
       { title: 'TITLE', component: MenuPrincipal, icon: 'md-home' },
       { title: 'GET_KMS', component: Page1, icon: 'md-calculator' },
+      { title: 'SETTINGS', component: Page2, icon: 'md-build'},
       { title: 'SETTINGS', component: Page2, icon: 'md-mail'},
 
     ];
