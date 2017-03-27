@@ -9,7 +9,7 @@
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <!-- Advanced: explicity set the icon for each platform -->
-        <ion-icon ios="ios-at" md="md-at"></ion-icon> {{p.title}}
+        <ion-icon name="md-home"></ion-icon> {{p.title | translate}}
       </button>
     </ion-list>
   </ion-content>
