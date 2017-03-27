@@ -11,6 +11,10 @@
 	"GET_TIME": "Obtener tiempo",
 	"CLOSE_APP_COMPLETE": "Salir de la aplicación",
 	"CLOSE": "Salir",
-	"ABOUT INFO": "Acerca de",
-	"INPUT_KM_NUMBER": "Introduzca el números de kms: "
+	"ABOUT_INFO": "Acerca de",
+	"INPUT_KM_NUMBER": "Introduzca el números de kms: ",
+	"KM_LABEL": "KM",
+	"PACE_MIN_KM_LABEL": "min/km",
+	"TWO_POINTS": " : ",
+	"INPUT_PACE_MIN_KM": "Introduzca el ritmo medio: "
 }
