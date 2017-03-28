@@ -5,6 +5,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { MenuPrincipal } from '../pages/menu-principal/menu-principal';
+import { Contact } from '../pages/contact/contact';
 
 
 @Component({
@@ -40,6 +41,7 @@ export class MyApp {
       { title: 'GET_KMS', component: Page1, icon: 'md-calculator' },
       { title: 'SETTINGS', component: Page2, icon: 'md-build'},
       { title: 'SETTINGS', component: Page2, icon: 'md-mail'},
+      { title: 'CONTACT' , component: Contact, icon: 'md-create'}
 
     ];
 
