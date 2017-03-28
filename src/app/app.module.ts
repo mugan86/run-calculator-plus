@@ -12,6 +12,7 @@ import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { Page3 } from '../pages/page3/page3';
 import { MenuPrincipal } from '../pages/menu-principal/menu-principal';
+import { Contact } from '../pages/contact/contact';
 
 //Directives
 import { DefaultImage } from '../directives/default-image';
@@ -25,7 +26,9 @@ import { ConvertedService } from "./../services/converter";
     Page1,
     Page2,
     Page3,
-    MenuPrincipal, DefaultImage
+    MenuPrincipal, 
+    Contact,
+    DefaultImage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
