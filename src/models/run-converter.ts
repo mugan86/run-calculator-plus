@@ -342,6 +342,39 @@ export class RunConverter
     }
 
     /**
+    * Get Climb Percentage (%)
+    * @param distance: Distance in select format (specific in distType)
+    * @param Climb: Climb Metres (or descent, pass "-" value)
+    * @param distType: Distance unit (m, mile, km,...)
+    * @return Climb / Descent percentage
+    * vertical distance (m) · 100/horizontal distance = climb%
+    */
+    GetClimbPercentage(distance, Climb, distType)
+    {
+        if (distType != 1) //Not metres
+        {
+            if (distType == 2) distance = this.GetDistanceinMeters(distance);
+        }
+        return this.GetDoubleValue(Climb * 100 / distance, 2);
+    }
+
+    /**
+    * Get Climb Meters per km
+    * @param distance: Distance total in select format (specific in distType)
+    * @param Climb: Climb Metres total (or descent, pass "-" value)
+    * @param distType: Distance unit (m, mile, km,...)
+    * @return Climb m+ per km 
+    */
+    GetClimbMetersPerKm(distance, Climb, distType)
+    {
+        if (distType != 2) //Not metres
+        {
+            if (distType == 1) distance = this.GetDistanceInKms(distance);
+        }
+        return this.GetDoubleValue(Climb / distance, 2);
+    }
+
+    /**
     * Round value with specific decimals
     * @param pace_per_km: Time total in seconds to complete one kilometer
     * @param pace_per_km: Time total in seconds to complete one kilometer
