@@ -16,5 +16,7 @@
 	"KM_LABEL": "KM",
 	"PACE_MIN_KM_LABEL": "min/km",
 	"TWO_POINTS": " : ",
-	"INPUT_PACE_MIN_KM": "Introduzca el ritmo medio: "
+	"INPUT_PACE_MIN_KM": "Introduzca el ritmo medio: ",
+	"CONTACT": "Contact",
+	"TECHNOLOGIES_USE": "Technologies use to develop this app"
 }
