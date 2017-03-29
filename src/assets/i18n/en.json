@@ -14,6 +14,21 @@
 	"INTRO": "Run Calculator Plus Menu",
 	"INTRO_TEXT": "This text use to intro ;)",
 	"KM_LABEL": "KM",
+	"LANGUAGE": 
+	{
+		"SELECT": "Select language",
+		"CATALA": "Catalá",
+		"DEUTCH": "Deutsch",
+		"ENGLISH": "English",
+		"SPANISH": "Spanish",
+		"BASQUE": "Euskara",
+		"FRANCAIS": "Français",
+		"GALEGO": "Galego",
+		"ITALIANO": "Italiano",
+		"JAPANESE": "Japanase",
+		"PORTUGUES": "Português",
+		"RUSO": "Pусский"
+	},
 	"PACE_MIN_KM_LABEL": "min/km",
 	"SETTINGS": "Settings",
 	"TECHNOLOGIES_USE": "Technologies use to develop this app",
