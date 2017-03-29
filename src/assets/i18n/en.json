@@ -6,8 +6,14 @@
 	"CLOSE": "Salir",
 	"CLOSE_APP_COMPLETE": "Salir de la aplicación",
 	"CONTACT": "Contact",
+	"ERROR_MESSAGES":{
+
+	},
 	"GENERAL_INFO":{
-		"APP_CREATE_BY": "Develop app by Anartz Mugika. More info in @mugan86"
+		"APP_CREATE_BY": "Develop app by Anartz Mugika. More info in @mugan86",
+		"TECHNOLOGIES_USE": "Technologies use to develop this app",
+		"TITLE": "Run Calculator :)",
+		"TWO_POINTS": " : "
 	},
 	"GET_KMS": "Get kms",
 	"GET_PACE": "Obtener ritmo",
@@ -66,8 +72,5 @@
 		"MILES_H": "Speed (miles/h)",
 		"MIN_KM": "Speed (min/km)",
 		"M_S": "Speed (metres/s)"
-	},
-	"TECHNOLOGIES_USE": "Technologies use to develop this app",
-	"TITLE": "Run Calculator :)",
-	"TWO_POINTS": " : "
+	}
 }
