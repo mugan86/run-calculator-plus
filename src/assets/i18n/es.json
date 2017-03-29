@@ -6,7 +6,16 @@
 	"CLOSE": "Salir",
 	"CLOSE_APP_COMPLETE": "Salir de la aplicación",
 	"CONTACT": "Contacto",
-	"GET_KMS": "Obtener kms",
+	"ERROR_MESSAGES":{
+
+	},
+	"GENERAL_INFO":{
+		"APP_CREATE_BY": "Develop app by Anartz Mugika. More info in @mugan86",
+		"TECHNOLOGIES_USE": "Technologies use to develop this app",
+		"TITLE": "Run Calculator :)",
+		"TWO_POINTS": " : "
+	},
+	"GET_KMS": "Get kms",
 	"GET_PACE": "Obtener ritmo",
 	"GET_TIME": "Obtener tiempo",
 	"INPUT_KM_NUMBER": "Introduzca el números de kms: ",
@@ -14,9 +23,54 @@
 	"INTRO": "Run Calculator Plus Menu",
 	"INTRO_TEXT": "This text use to intro ;)",
 	"KM_LABEL": "KM",
+	"LANGUAGE":
+	{
+		"SELECT": "Select language",
+		"LABELS": {
+			"CATALA": "Catalá",
+			"DEUTCH": "Deutsch",
+			"ENGLISH": "English",
+			"SPANISH": "Spanish",
+			"BASQUE": "Euskara",
+			"FRANCAIS": "Français",
+			"GALEGO": "Galego",
+			"ITALIANO": "Italiano",
+			"JAPANESE": "Japanase",
+			"PORTUGUES": "Português",
+			"RUSO": "Pусский"
+		},
+		"CODES": {
+			"CATALA": "ca",
+			"DEUTCH": "de",
+			"ENGLISH": "en",
+			"SPANISH": "es",
+			"BASQUE": "eu",
+			"FRANCAIS": "fr",
+			"GALEGO": "gl",
+			"ITALIANO": "it",
+			"JAPANESE": "ja",
+			"PORTUGUES": "pt",
+			"RUSO": "ru"
+		}
+	},
 	"PACE_MIN_KM_LABEL": "min/km",
+	"REFERENCES": {
+		"KM_H": "Km/h references",
+		"KM_H_PLUS": "Km/h references and more"
+	},
+	"RHYTHMS": {
+		"HIGH": "High",
+		"LABEL": "Rhythms",
+		"LAPS_PER_DISTANCE": "Laps per distance",
+		"MEDIUM": "Medium",
+		"SLOW": "Slow",
+		"VERY_HIGH": "Very High"
+	},
 	"SETTINGS": "Configuración",
-	"TECHNOLOGIES_USE": "Tecnologías usadas para desarrollar esta aplicación",
-	"TITLE": "Calculadora Run :)",
-	"TWO_POINTS": " : "
+	"SPEED":{
+		"KM_H": "Velocidad (km/h)",
+		"MILES_H": "Velocidad (miles/h)",
+		"MIN_KM": "Velocidad (min/km)",
+		"M_S": "Velocidad (m/s)"
+	}
 }
