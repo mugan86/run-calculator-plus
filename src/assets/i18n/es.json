@@ -15,7 +15,7 @@
 		"TITLE": "Run Calculator :)",
 		"TWO_POINTS": " : "
 	},
-	"GET_KMS": "Get kms",
+	"GET_KMS": "Obtener kms",
 	"GET_PACE": "Obtener ritmo",
 	"GET_TIME": "Obtener tiempo",
 	"INPUT_KM_NUMBER": "Introduzca el números de kms: ",
@@ -25,7 +25,7 @@
 	"KM_LABEL": "KM",
 	"LANGUAGE":
 	{
-		"SELECT": "Select language",
+		"SELECT": "Seleccionar idioma",
 		"LABELS": {
 			"CATALA": "Catalá",
 			"DEUTCH": "Deutsch",
@@ -55,16 +55,16 @@
 	},
 	"PACE_MIN_KM_LABEL": "min/km",
 	"REFERENCES": {
-		"KM_H": "Km/h references",
-		"KM_H_PLUS": "Km/h references and more"
+		"KM_H": "Referencias por Km/h",
+		"KM_H_PLUS": "Referencias por Km/h y más"
 	},
 	"RHYTHMS": {
-		"HIGH": "High",
-		"LABEL": "Rhythms",
-		"LAPS_PER_DISTANCE": "Laps per distance",
-		"MEDIUM": "Medium",
-		"SLOW": "Slow",
-		"VERY_HIGH": "Very High"
+		"HIGH": "Alto",
+		"LABEL": "Ritmos",
+		"LAPS_PER_DISTANCE": "Vueltas por distancia",
+		"MEDIUM": "Medios",
+		"SLOW": "Despacio",
+		"VERY_HIGH": "Muy alto"
 	},
 	"SETTINGS": "Configuración",
 	"SPEED":{
