@@ -1,22 +1,76 @@
 {
 	"ABOUT_APP": "Anartz Mugika-k garatutako aplikazioa. Nirekin harremanetan jartzeko:",
-	"ABOUT_INFO": "Acerca de",
+	"ABOUT_INFO": "Honi buruz",
 	"APP_NAME": "RunCalculator Plus",
-	"AVAILABLE_CONVERSIONS_IN_APP": "Conversiones disponibles",
-	"CLOSE": "Salir",
-	"CLOSE_APP_COMPLETE": "Salir de la aplicación",
+	"AVAILABLE_CONVERSIONS_IN_APP": "Konbersio aukerak",
+	"CLOSE": "Irten",
+	"CLOSE_APP_COMPLETE": "Aplikaziotik atera",
 	"CONTACT": "Kontaktua",
+	"ERROR_MESSAGES":{
+
+	},
+	"GENERAL_INFO":{
+		"APP_CREATE_BY": "DAnartz Mugika-k garatutako aplikazioa. Informazio gehiago @mugan86",
+		"TECHNOLOGIES_USE": "Aplikazio hau garatzeko erabilitako teknologiak",
+		"TITLE": "Run Calculator :)",
+		"TWO_POINTS": " : "
+	},
 	"GET_KMS": "Kilometroak lortu",
-	"GET_PACE": "Obtener ritmo",
-	"GET_TIME": "Obtener tiempo",
-	"INPUT_KM_NUMBER": "Introduzca el números de kms: ",
-	"INPUT_PACE_MIN_KM": "Introduzca el ritmo medio: ",
+	"GET_PACE": "Erritmoa lortu",
+	"GET_TIME": "Denbora lortu",
+	"INPUT_KM_NUMBER": "Kilometro kopurua sartu: ",
+	"INPUT_PACE_MIN_KM": "Bataz besteko erritmoa sartu: ",
 	"INTRO": "Run Calculator Plus Menu",
 	"INTRO_TEXT": "This text use to intro ;)",
 	"KM_LABEL": "KM",
+	"LANGUAGE":
+	{
+		"SELECT": "Aukeratu hizkuntza",
+		"LABELS": {
+			"CATALA": "Catalá",
+			"DEUTCH": "Deutsch",
+			"ENGLISH": "English",
+			"SPANISH": "Spanish",
+			"BASQUE": "Euskara",
+			"FRANCAIS": "Français",
+			"GALEGO": "Galego",
+			"ITALIANO": "Italiano",
+			"JAPANESE": "Japanase",
+			"PORTUGUES": "Português",
+			"RUSO": "Pусский"
+		},
+		"CODES": {
+			"CATALA": "ca",
+			"DEUTCH": "de",
+			"ENGLISH": "en",
+			"SPANISH": "es",
+			"BASQUE": "eu",
+			"FRANCAIS": "fr",
+			"GALEGO": "gl",
+			"ITALIANO": "it",
+			"JAPANESE": "ja",
+			"PORTUGUES": "pt",
+			"RUSO": "ru"
+		}
+	},
 	"PACE_MIN_KM_LABEL": "min/km",
-	"SETTINGS": "Settings",
-	"TECHNOLOGIES_USE": "Technologies use to develop this app",
-	"TITLE": "Korrika kalkuladorea :)",
-	"TWO_POINTS": " : "
+	"REFERENCES": {
+		"KM_H": "Km/h erreferentziak",
+		"KM_H_PLUS": "Km/h erreferentziak eta gehiago"
+	},
+	"RHYTHMS": {
+		"HIGH": "Altua",
+		"LABEL": "Erritmo",
+		"LAPS_PER_DISTANCE": "Distantzian bueltak",
+		"MEDIUM": "Ertainak",
+		"SLOW": "Motela",
+		"VERY_HIGH": "Oso altua"
+	},
+	"SETTINGS": "Konfigurazioa",
+	"SPEED":{
+		"KM_H": "Abiadura (km/h)",
+		"MILES_H": "Abiadura (miles/h)",
+		"MIN_KM": "Abiadura (min/km)",
+		"M_S": "Abiadura (m/s)"
+	}
 }
