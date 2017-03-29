@@ -6,7 +6,7 @@
 	"CLOSE": "Salir",
 	"CLOSE_APP_COMPLETE": "Salir de la aplicación",
 	"CONTACT": "Contact",
-	"GET_KMS": "Obtener kms",
+	"GET_KMS": "Get kms",
 	"GET_PACE": "Obtener ritmo",
 	"GET_TIME": "Obtener tiempo",
 	"INPUT_KM_NUMBER": "Introduzca el números de kms: ",
@@ -17,6 +17,6 @@
 	"PACE_MIN_KM_LABEL": "min/km",
 	"SETTINGS": "Settings",
 	"TECHNOLOGIES_USE": "Technologies use to develop this app",
-	"TITLE": "Calculadora Run :)",
+	"TITLE": "Run Calculator :)",
 	"TWO_POINTS": " : "
 }
