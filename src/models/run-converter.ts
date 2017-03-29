@@ -407,6 +407,28 @@ export class RunConverter
         return +meters / 1000;
     }
 
+
+     /**
+    * Convert distance in kms to meters
+    * @param distance: Distance in kilometers
+    * @return Distance in meters. 1Mile = 1609.3399metres
+    */
+    private GetDistanceMilesinMeters(distance)
+    {
+        return +distance * 1609.3399;
+    }
+
+    /**
+    * Convert distance in miles from mts
+    * @param distance: Distance in metres
+    * @return Distance in kms. 1609.3399 metres = 1mile
+    */
+    private GetDistanceInMiles(meters)
+    {
+        return +meters / 1609.3399;
+    }
+
+
     /**
     *
     * @param number: Number to use to return with two digits
