@@ -17,9 +17,13 @@
 
 
 app-page {
- 
+
   .header {
     color: blue;
   }
- 
+
 }
+
+@import "../theme/variables.scss";
+@import "../pages/page1/page1.scss";
+@import "../pages/contact/contact.scss";
