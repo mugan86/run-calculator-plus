@@ -17,17 +17,33 @@
 	"LANGUAGE": 
 	{
 		"SELECT": "Select language",
-		"CATALA": "Catalá",
-		"DEUTCH": "Deutsch",
-		"ENGLISH": "English",
-		"SPANISH": "Spanish",
-		"BASQUE": "Euskara",
-		"FRANCAIS": "Français",
-		"GALEGO": "Galego",
-		"ITALIANO": "Italiano",
-		"JAPANESE": "Japanase",
-		"PORTUGUES": "Português",
-		"RUSO": "Pусский"
+		"LABELS": {
+			"CATALA": "Catalá",
+			"DEUTCH": "Deutsch",
+			"ENGLISH": "English",
+			"SPANISH": "Spanish",
+			"BASQUE": "Euskara",
+			"FRANCAIS": "Français",
+			"GALEGO": "Galego",
+			"ITALIANO": "Italiano",
+			"JAPANESE": "Japanase",
+			"PORTUGUES": "Português",
+			"RUSO": "Pусский"
+		},
+		"CODES": {
+			"CATALA": "ca",
+			"DEUTCH": "de",
+			"ENGLISH": "en",
+			"SPANISH": "es",
+			"BASQUE": "eu",
+			"FRANCAIS": "fr",
+			"GALEGO": "gl",
+			"ITALIANO": "it",
+			"JAPANESE": "ja",
+			"PORTUGUES": "pt",
+			"RUSO": "ru"
+		}
+		
 	},
 	"PACE_MIN_KM_LABEL": "min/km",
 	"SETTINGS": "Settings",
