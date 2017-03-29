@@ -6,6 +6,9 @@
 	"CLOSE": "Salir",
 	"CLOSE_APP_COMPLETE": "Salir de la aplicación",
 	"CONTACT": "Contact",
+	"GENERAL_INFO":{
+		"APP_CREATE_BY": "Develop app by Anartz Mugika. More info in @mugan86"
+	},
 	"GET_KMS": "Get kms",
 	"GET_PACE": "Obtener ritmo",
 	"GET_TIME": "Obtener tiempo",
@@ -45,6 +48,10 @@
 		}
 	},
 	"PACE_MIN_KM_LABEL": "min/km",
+	"REFERENCES": {
+		"KM_H": "Km/h references",
+		"KM_H_PLUS": "Km/h references and more"
+	},
 	"RHYTHMS": {
 		"HIGH": "High",
 		"LABEL": "Rhythms",
