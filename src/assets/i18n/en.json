@@ -43,10 +43,23 @@
 			"PORTUGUES": "pt",
 			"RUSO": "ru"
 		}
-		
 	},
 	"PACE_MIN_KM_LABEL": "min/km",
+	"RHYTHMS": {
+		"HIGH": "High",
+		"LABEL": "Rhythms",
+		"LAPS_PER_DISTANCE": "Laps per distance",
+		"MEDIUM": "Medium",
+		"SLOW": "Slow",
+		"VERY_HIGH": "Very High"
+	},
 	"SETTINGS": "Settings",
+	"SPEED":{
+		"KM_H": "Speed (km/h)",
+		"MILES_H": "Speed (miles/h)",
+		"MIN_KM": "Speed (min/km)",
+		"M_S": "Speed (metres/s)"
+	},
 	"TECHNOLOGIES_USE": "Technologies use to develop this app",
 	"TITLE": "Run Calculator :)",
 	"TWO_POINTS": " : "
