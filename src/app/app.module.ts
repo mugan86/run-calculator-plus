@@ -26,7 +26,7 @@ import { ConvertedService } from "./../services/converter";
     Page1,
     Page2,
     Page3,
-    MenuPrincipal, 
+    MenuPrincipal,
     Contact,
     DefaultImage
   ],
@@ -42,7 +42,7 @@ import { ConvertedService } from "./../services/converter";
   entryComponents: [
     MyApp,
     Page1,
-    Page2, Page3, MenuPrincipal
+    Page2, Page3, MenuPrincipal, Contact
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ConvertedService]
 })
