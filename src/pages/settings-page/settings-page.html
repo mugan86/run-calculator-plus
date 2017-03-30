@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>settingsPage</ion-title>
+  <ion-navbar color="twitter">
+    <ion-title>{{'SETTINGS' | translate}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -18,7 +18,7 @@
       <ion-item>
         <ion-label>{{'LANGUAGE.SELECT' | translate}}</ion-label>
         <ion-select [(ngModel)]="language">
-          <ion-option *ngFor="let lang of languages" [value]="lang.code">{{'lang.label' | translate}}</ion-option>
+          <ion-option *ngFor="let lang of languages" [value]="lang.code">{{lang.label | translate}}</ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
