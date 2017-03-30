@@ -25,7 +25,21 @@ export class SettingsPage {
   }
 
   initializeLanguages() {
-    
+
+    this.languages = [
+      { label: 'LANGUAGES.LABEL.CATALA', code: 'ca'},
+      { label: 'LANGUAGES.LABEL.DEUTCH', code: 'de'},
+      { label: 'LANGUAGES.LABEL.ENGLISH', code: 'en'},
+      { label: 'LANGUAGES.LABEL.SPANISH', code: 'es'},
+      { label: 'LANGUAGES.LABEL.BASQUE', code: 'eu'},
+      { label: 'LANGUAGES.LABEL.FRANCAIS', code: 'fr'},
+      { label: 'LANGUAGES.LABEL.GALEGO', code: 'gl'},
+      { label: 'LANGUAGES.LABEL.ITALIANO', code: 'it'},
+      { label: 'LANGUAGES.LABEL.JAPANESE', code: 'ja'},
+      { label: 'LANGUAGES.LABEL.PORTUGUES', code: 'pt'},
+      { label: 'LANGUAGES.LABEL.RUSO', code: 'ru'}
+
+    ];
   }
 
   ionViewDidLoad() {
