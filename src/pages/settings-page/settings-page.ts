@@ -15,7 +15,7 @@ import { ILanguage } from '../../interfaces/language';
 })
 export class SettingsPage {
   converter: RunConverter;
-  languages: 
+  languages: ILanguage[];
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
     this.converter= new RunConverter();
