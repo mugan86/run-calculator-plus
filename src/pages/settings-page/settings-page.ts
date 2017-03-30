@@ -27,17 +27,17 @@ export class SettingsPage {
   initializeLanguages() {
 
     this.languages = [
-      { label: 'LANGUAGES.LABEL.CATALA', code: 'ca'},
-      { label: 'LANGUAGES.LABEL.DEUTCH', code: 'de'},
-      { label: 'LANGUAGES.LABEL.ENGLISH', code: 'en'},
-      { label: 'LANGUAGES.LABEL.SPANISH', code: 'es'},
-      { label: 'LANGUAGES.LABEL.BASQUE', code: 'eu'},
-      { label: 'LANGUAGES.LABEL.FRANCAIS', code: 'fr'},
-      { label: 'LANGUAGES.LABEL.GALEGO', code: 'gl'},
-      { label: 'LANGUAGES.LABEL.ITALIANO', code: 'it'},
-      { label: 'LANGUAGES.LABEL.JAPANESE', code: 'ja'},
-      { label: 'LANGUAGES.LABEL.PORTUGUES', code: 'pt'},
-      { label: 'LANGUAGES.LABEL.RUSO', code: 'ru'}
+      { label: 'LANGUAGE.LABELS.CATALA', code: 'ca'},
+      { label: 'LANGUAGE.LABELS.DEUTCH', code: 'de'},
+      { label: 'LANGUAGE.LABELS.ENGLISH', code: 'en'},
+      { label: 'LANGUAGE.LABELS.SPANISH', code: 'es'},
+      { label: 'LANGUAGE.LABELS.BASQUE', code: 'eu'},
+      { label: 'LANGUAGE.LABELS.FRANCAIS', code: 'fr'},
+      { label: 'LANGUAGE.LABELS.GALEGO', code: 'gl'},
+      { label: 'LANGUAGE.LABELS.ITALIANO', code: 'it'},
+      { label: 'LANGUAGE.LABELS.JAPANESE', code: 'ja'},
+      { label: 'LANGUAGE.LABELS.PORTUGUES', code: 'pt'},
+      { label: 'LANGUAGE.LABELS.RUSO', code: 'ru'}
 
     ];
   }
