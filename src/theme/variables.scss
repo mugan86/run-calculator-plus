@@ -79,3 +79,17 @@ $colors: (
 @import "noto-sans";
 
 @import "../pages/page1/page1.scss";
+
+// Custom Themes
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+$navbars: (
+  default: (
+    primary: color($colors, twitter),
+    secondary: red
+  )
+);
