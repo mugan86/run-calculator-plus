@@ -25,7 +25,13 @@ Navigation side menu styles
 
 .menuSection
 {
-  height: 25px;
+  height: 30px;
   background: color($colors, twitter);
   margin-top: -35px;
+  .title{
+    text-align: center;
+    color: white;
+    padding: 8px;
+    margin-bottom: 12px
+  }
 }
