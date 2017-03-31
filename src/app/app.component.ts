@@ -18,11 +18,16 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   //Define that page is main page (rootpage)
-  rootPage: any = MenuPrincipal;
+  rootPage: any;
+
+
 
   pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(public platform: Platform) {
+
+    if (localStorage.getItem('welcomeComplete') == "1") this.rootPage = MenuPrincipal;
+    else this.rootPage = WelcomePage;
 
     /*************************************************************************
     Check if language select, if not select nothing, set 'en'
