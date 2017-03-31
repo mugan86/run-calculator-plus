@@ -47,4 +47,9 @@ export class SettingsPage {
     console.log('ionViewDidLoad SettingsPagePage');
   }
 
+  updateSelectLanguage()
+  {
+    console.info("Change from " + localStorage.getItem('selectLanguage') + " to " + this.language);
+  }
+
 }
