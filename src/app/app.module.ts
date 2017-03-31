@@ -8,16 +8,16 @@ import { Http } from '@angular/http';
 import { MyApp } from './app.component';
 
 //Pages
-import { WelcomePage } from '../pages/welcome/welcome';
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
-import { Page3 } from '../pages/page3/page3';
-import { MenuPrincipal } from '../pages/menu-principal/menu-principal';
-import { Contact } from '../pages/contact/contact';
-import { SettingsPage } from '../pages/settings-page/settings-page';
+import { WelcomePage } from './../pages/welcome/welcome';
+import { Page1 } from './../pages/page1/page1';
+import { Page2 } from './../pages/page2/page2';
+import { Page3 } from './../pages/page3/page3';
+import { MenuPrincipal } from './../pages/menu-principal/menu-principal';
+import { Contact } from './../pages/contact/contact';
+import { SettingsPage } from './../pages/settings-page/settings-page';
 
 //Directives
-import { DefaultImage } from '../directives/default-image';
+import { DefaultImage } from './../directives/default-image';
 
 //Services
 import { ConvertedService } from "./../services/converter";
