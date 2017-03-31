@@ -13,8 +13,12 @@ export class MenuPrincipal {
   convertions = [{icon: 'iii', label: 'Kms'}];
   constructor(public navCtrl: NavController, public translate: TranslateService) {
 
-    //Finish to view welcome page
-    localStorage.setItem('welcomeComplete', "1");
+    if (localStorage.getItem('welcomeComplete') != "1")
+    {
+      //Finish to view welcome page
+      localStorage.setItem('welcomeComplete', "1");
+    }
+
 
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
     this.converter= new RunConverter();
@@ -26,4 +30,6 @@ export class MenuPrincipal {
   {
     console.log("21.1 km/h = " + this.converter.KilometersPerHourToPaceMinKm(21.1)  + " min/km");
   }
+
+
 }
