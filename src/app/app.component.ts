@@ -2,12 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
-import { MenuPrincipal } from '../pages/menu-principal/menu-principal';
-import { Contact } from '../pages/contact/contact';
-import { SettingsPage } from '../pages/settings-page/settings-page';
-import { WelcomePage } from '../pages/welcome/welcome';
+import { Page1 } from './../pages/page1/page1';
+import { Page2 } from './../pages/page2/page2';
+import { MenuPrincipal } from './../pages/menu-principal/menu-principal';
+import { Contact } from './../pages/contact/contact';
+import { SettingsPage } from './../pages/settings-page/settings-page';
+import { WelcomePage } from './../pages/welcome/welcome';
 
 
 @Component({
@@ -68,5 +68,9 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+  goToMenuPrincipal()
+  {
+    this.nav.setRoot(MenuPrincipal);
   }
 }
