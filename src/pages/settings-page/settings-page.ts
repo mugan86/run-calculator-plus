@@ -51,6 +51,7 @@ export class SettingsPage {
   {
     console.info("Change from " + localStorage.getItem('selectLanguage') + " to " + this.language);
     this.translate.setDefaultLang(this.language);
+    this.initializeLanguages();
   }
 
 }
