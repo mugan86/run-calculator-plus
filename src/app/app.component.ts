@@ -18,7 +18,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   //Define that page is main page (rootpage)
-  rootPage: any = WelcomePage;
+  rootPage: any = MenuPrincipal;
 
   pages: Array<{title: string, component: any, icon: string}>;
 
