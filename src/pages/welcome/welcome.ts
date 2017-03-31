@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { MenuPrincipal } from './../menu-principal/menu-principal';
 /*
   Generated class for the Welcome page.
 
@@ -12,11 +12,15 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
+  }
+
+  goToMenuPrincipal()
+  {
+    this.navCtrl.push(MenuPrincipal);
   }
 
 }
