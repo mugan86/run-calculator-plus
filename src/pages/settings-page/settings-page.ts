@@ -16,7 +16,7 @@ import { ILanguage } from '../../interfaces/language';
 export class SettingsPage {
   converter: RunConverter;
   languages: ILanguage[];
-  language: string = localStorage.getItem('selectLanguage');
+  language: string;
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
     this.converter= new RunConverter();
@@ -26,7 +26,7 @@ export class SettingsPage {
   }
 
   initializeLanguages() {
-
+    this.language = localStorage.getItem('selectLanguage');
     this.languages = [
       { label: 'LANGUAGE.LABELS.CATALA', code: 'ca'},
       { label: 'LANGUAGE.LABELS.DEUTCH', code: 'de'},
@@ -49,9 +49,14 @@ export class SettingsPage {
 
   updateSelectLanguage()
   {
-    console.info("Change from " + localStorage.getItem('selectLanguage') + " to " + this.language);
-    this.translate.setDefaultLang(this.language);
-    this.initializeLanguages();
+    if (this.language != localStorage.getItem('selectLanguage'))
+    {
+      console.info("Change from " + localStorage.getItem('selectLanguage') + " to " + this.language);
+      this.translate.setDefaultLang(this.language);
+      localStorage.setItem('selectLanguage', this.language);
+      this.initializeLanguages();
+    }
+    
   }
 
 }
