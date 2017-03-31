@@ -7,6 +7,7 @@ import { Page2 } from '../pages/page2/page2';
 import { MenuPrincipal } from '../pages/menu-principal/menu-principal';
 import { Contact } from '../pages/contact/contact';
 import { SettingsPage } from '../pages/settings-page/settings-page';
+import { WelcomePage } from '../pages/welcome/welcome';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   //Define that page is main page (rootpage)
-  rootPage: any = SettingsPage;
+  rootPage: any = WelcomePage;
 
   pages: Array<{title: string, component: any, icon: string}>;
 
