@@ -67,6 +67,7 @@
 		"VERY_HIGH": "Muy alto"
 	},
 	"SETTINGS": "Configuración",
+	"SKIP": "SKIP",
 	"SPEED":{
 		"KM_H": "Velocidad (km/h)",
 		"MILES_H": "Velocidad (miles/h)",
