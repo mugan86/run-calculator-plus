@@ -23,7 +23,7 @@
 	"INTRO": "Run Calculator Plus Menu",
 	"INTRO_TEXT": "This text use to intro ;)",
 	"KM_LABEL": "KM",
-	"LANGUAGE": 
+	"LANGUAGE":
 	{
 		"SELECT": "Select language",
 		"LABELS": {
@@ -67,6 +67,7 @@
 		"VERY_HIGH": "Very High"
 	},
 	"SETTINGS": "Settings",
+	"SKIP": "SKIP",
 	"SPEED":{
 		"KM_H": "Speed (km/h)",
 		"MILES_H": "Speed (miles/h)",
