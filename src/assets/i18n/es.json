@@ -81,19 +81,19 @@
 					"M_S": "Velocidad (m/s)"
 		},
 		"SLIDE2":{
-					"KM_H": "Velocidad (km/h)",
+					"TITLE": "Velocidad (km/h)",
 					"MILES_H": "Velocidad (miles/h)",
 					"MIN_KM": "Velocidad (min/km)",
 					"M_S": "Velocidad (m/s)"
 		},
 		"SLIDE3":{
-					"KM_H": "Velocidad (km/h)",
+					"TITLE": "Velocidad (km/h)",
 					"MILES_H": "Velocidad (miles/h)",
 					"MIN_KM": "Velocidad (min/km)",
 					"M_S": "Velocidad (m/s)"
 		},
 		"SLIDE4":{
-					"KM_H": "Velocidad (km/h)",
+					"TITLE": "Velocidad (km/h)",
 					"MILES_H": "Velocidad (miles/h)",
 					"MIN_KM": "Velocidad (min/km)",
 					"M_S": "Velocidad (m/s)"
