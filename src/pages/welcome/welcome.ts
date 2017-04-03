@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { MenuPrincipal } from './../menu-principal/menu-principal';
+import { TranslateService } from 'ng2-translate';
 /*
   Generated class for the Welcome page.
 
@@ -12,7 +13,11 @@ import { MenuPrincipal } from './../menu-principal/menu-principal';
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
+
+    translate.setDefaultLang(localStorage.getItem('selectLanguage'));
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
