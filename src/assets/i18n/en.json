@@ -72,5 +72,31 @@
 		"MILES_H": "Speed (miles/h)",
 		"MIN_KM": "Speed (min/km)",
 		"M_S": "Speed (metres/s)"
+	},
+	"WELCOME":{
+		"SLIDE1":{
+					"TITLE": "Bienvenido al Run Calculator Plus!",
+					"MILES_H": "Velocidad (miles/h)",
+					"MIN_KM": "Velocidad (min/km)",
+					"M_S": "Velocidad (m/s)"
+		},
+		"SLIDE2":{
+					"TITLE": "Velocidad (km/h)",
+					"MILES_H": "Velocidad (miles/h)",
+					"MIN_KM": "Velocidad (min/km)",
+					"M_S": "Velocidad (m/s)"
+		},
+		"SLIDE3":{
+					"TITLE": "Velocidad (km/h)",
+					"MILES_H": "Velocidad (miles/h)",
+					"MIN_KM": "Velocidad (min/km)",
+					"M_S": "Velocidad (m/s)"
+		},
+		"SLIDE4":{
+					"TITLE": "Velocidad (km/h)",
+					"MILES_H": "Velocidad (miles/h)",
+					"MIN_KM": "Velocidad (min/km)",
+					"M_S": "Velocidad (m/s)"
+		}
 	}
 }
