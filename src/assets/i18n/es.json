@@ -98,6 +98,7 @@
 					"MILES_H": "Velocidad (miles/h)",
 					"MIN_KM": "Velocidad (min/km)",
 					"M_S": "Velocidad (m/s)"
-		}
+		},
+		"TITLE": "Bienvenido!!"
 	}
 }
