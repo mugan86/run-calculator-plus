@@ -35,7 +35,25 @@ import { ConvertedService } from "./../services/converter";
     DefaultImage
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
+     IonicModule.forRoot(MyApp, {
+      backButtonText: '',
+      platforms: {
+        ios: {
+          iconMode: 'ios',
+          tabsPlacement: 'top',
+          pageTransition: 'ios-transition'
+        },
+        android: {
+          iconMode: 'md',
+           tabsPlacement: 'bottom',
+           pageTransition: 'md-transition'
+        }
+      },
+      modalEnter: 'modal-slide-in',
+      modalLeave: 'modal-slide-out',
+      
+    }, {}
+  ),
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
