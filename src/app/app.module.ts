@@ -41,12 +41,14 @@ import { ConvertedService } from "./../services/converter";
         ios: {
           iconMode: 'ios',
           tabsPlacement: 'top',
-          pageTransition: 'ios-transition'
+          pageTransition: 'ios-transition',
+           backButtonIcon: 'ios-arrow-round-back'
         },
         android: {
           iconMode: 'md',
            tabsPlacement: 'bottom',
-           pageTransition: 'md-transition'
+           pageTransition: 'md-transition',
+           backButtonIcon: 'md-arrow-round-back'
         }
       },
       modalEnter: 'modal-slide-in',
