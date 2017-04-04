@@ -76,13 +76,23 @@
 	},
 	"UNIT_OF_LENGTH":
 	{
+		"LABELS": {
+			"DEFAULT": "Select unit of length",
+			"KM": "Kilometres",
+			"MILE": "Milles"
+		},
+		"CODES": {
+			"DEFAULT": "default-unit",
+			"KM": "km",
+			"MILE": "mille"
+		},
 		"DEFAULT": {
 			"CODE": "default-unit",
 			"LABEL": "Select unit of length"
 		},
 		"KM": {
 			"CODE": "km",
-			"LABEL": "Kilómetros"
+			"LABEL": "Kilometres"
 		},
 		"MILE": {
 			"CODE": "mille",
