@@ -90,6 +90,7 @@
 		}
 	},
 	"WELCOME":{
+		"DESCRIPTION": "",
 		"SLIDE1":{
 					"TITLE": "Bienvenido al Run Calculator Plus!",
 					"MILES_H": "Velocidad (miles/h)",
