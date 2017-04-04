@@ -30,10 +30,10 @@ export class SettingsPage {
     this.converter= new RunConverter();
     console.log("17.9 km/h = " + this.converter.KilometersPerHourToPaceMinKm(17.9)  + " min/km");
 
-    this.initializeLanguages();
+    this.initializeValues();
   }
 
-  initializeLanguages() {
+  initializeValues() {
     this.language = localStorage.getItem('selectLanguage');
     this.languages = [
       { label: 'LANGUAGE.LABELS.CATALA', code: 'ca'},
@@ -51,16 +51,12 @@ export class SettingsPage {
 
     this.unitLength = localStorage.getItem('unitOfLengthSelect');
     this.unitOfLength = [
-      { 
-        label: 'UNIT_OF_LENGTH.DEFAULT.LABEL', 
-        code: 'UNIT_OF_LENGTH.DEFAULT.LABEL'
-      },
-      { 
-        label: 'UNIT_OF_LENGTH.KM.LABEL', 
+      {
+        label: 'UNIT_OF_LENGTH.KM.LABEL',
         code: 'UNIT_OF_LENGTH.KM.LABEL'
       },
-      { 
-        label: 'UNIT_OF_LENGTH.MILE.LABEL', 
+      {
+        label: 'UNIT_OF_LENGTH.MILE.LABEL',
         code: 'UNIT_OF_LENGTH.MILE.LABEL'
       }
     ];
@@ -78,9 +74,19 @@ export class SettingsPage {
       console.info("Change from " + localStorage.getItem('selectLanguage') + " to " + this.language);
       this.translate.setDefaultLang(this.language);
       localStorage.setItem('selectLanguage', this.language);
-      this.initializeLanguages();
+      this.initializeValues();
     }
-    
+
+  }
+
+  updateSelectUnitLength()
+  {
+    if (this.unitLength != localStorage.getItem('selectLanguage'))
+    {
+      console.info("Change from " + localStorage.getItem('unitOfLengthSelect') + " to " + this.unitLength);
+      localStorage.setItem('unitOfLengthSelect', this.unitLength);
+      this.initializeValues();
+    }
   }
 
 }
