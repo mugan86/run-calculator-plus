@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-import { RunConverter } from '../../models/run-converter';
+import { RunConverter } from './../../models/run-converter';
 import { TranslateService } from 'ng2-translate';
 
 @Component({

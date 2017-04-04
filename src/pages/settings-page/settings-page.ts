@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
-import { RunConverter } from '../../models/run-converter';
-import { ILanguage } from '../../interfaces/language';
-import { IUnitOfLength } from '../../interfaces/unit-of-length';
+import { RunConverter } from './../../models/run-converter';
+import { ILanguage } from './../../interfaces/language';
+import { IUnitOfLength } from './../../interfaces/unit-of-length';
 /*
   Generated class for the SettingsPage page.
 
