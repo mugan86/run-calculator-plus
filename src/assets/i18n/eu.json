@@ -76,17 +76,27 @@
 	},
 	"UNIT_OF_LENGTH":
 	{
+		"LABELS": {
+			"DEFAULT": "Aukeratu luzeera unitatea",
+			"KM": "Kilometroak",
+			"MILE": "Milak"
+		},
+		"CODES": {
+			"DEFAULT": "default-unit",
+			"KM": "km",
+			"MILE": "mille"
+		},
 		"DEFAULT": {
 			"CODE": "default-unit",
-			"LABEL": "Selecciona una unidad de longitud"
+			"LABEL": "Aukeratu luzeera unitatea"
 		},
 		"KM": {
 			"CODE": "km",
-			"LABEL": "Kilómetros"
+			"LABEL": "Kilometroak"
 		},
 		"MILE": {
 			"CODE": "mille",
-			"LABEL": "Millas"
+			"LABEL": "Milak"
 		}
 	},
 	"WELCOME":{
