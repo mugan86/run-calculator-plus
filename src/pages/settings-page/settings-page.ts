@@ -53,11 +53,11 @@ export class SettingsPage {
     this.unitOfLength = [
       {
         label: 'UNIT_OF_LENGTH.KM.LABEL',
-        code: 'UNIT_OF_LENGTH.KM.LABEL'
+        code: 'km'
       },
       {
         label: 'UNIT_OF_LENGTH.MILE.LABEL',
-        code: 'UNIT_OF_LENGTH.MILE.LABEL'
+        code: 'mille'
       }
     ];
 
