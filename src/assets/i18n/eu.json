@@ -92,24 +92,28 @@
 	"WELCOME":{
 		"DESCRIPTION": "",
 		"SLIDE1":{
+					"DESCRIPTION": "",
 					"TITLE": "Bienvenido al Run Calculator Plus!",
 					"MILES_H": "Velocidad (miles/h)",
 					"MIN_KM": "Velocidad (min/km)",
 					"M_S": "Velocidad (m/s)"
 		},
 		"SLIDE2":{
+					"DESCRIPTION": "",
 					"TITLE": "Velocidad (km/h)",
 					"MILES_H": "Velocidad (miles/h)",
 					"MIN_KM": "Velocidad (min/km)",
 					"M_S": "Velocidad (m/s)"
 		},
 		"SLIDE3":{
+					"DESCRIPTION": "",
 					"TITLE": "Velocidad (km/h)",
 					"MILES_H": "Velocidad (miles/h)",
 					"MIN_KM": "Velocidad (min/km)",
 					"M_S": "Velocidad (m/s)"
 		},
 		"SLIDE4":{
+					"DESCRIPTION": "",
 					"TITLE": "Velocidad (km/h)",
 					"MILES_H": "Velocidad (miles/h)",
 					"MIN_KM": "Velocidad (min/km)",
