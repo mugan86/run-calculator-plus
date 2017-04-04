@@ -13,9 +13,13 @@ import { TranslateService } from 'ng2-translate';
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
+
+  unitLengths : Boolean[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
 
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
+    this.unitLengths = [true, false];
   }
 
 
