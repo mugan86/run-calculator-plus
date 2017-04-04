@@ -28,9 +28,9 @@
     </ion-list>
     <ion-list>
       <ion-item>
-        <ion-label>{{'UNIT_OF_LENGTH.DEFAULT' | translate}}</ion-label>
-        <ion-select [(ngModel)]="unitLength" (ngModelChange)="updateSelectLanguage($event)">
-          <ion-option *ngFor="let lang of languages" [value]="lang.code">{{lang.label | translate}}</ion-option>
+        <ion-label>{{'UNIT_OF_LENGTH.DEFAULT.LABEL' | translate}}</ion-label>
+        <ion-select [(ngModel)]="unitLength" (ngModelChange)="updateSelectUnitLength($event)">
+          <ion-option *ngFor="let lang of unitOfLength" [value]="lang.code">{{lang.label | translate}}</ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
