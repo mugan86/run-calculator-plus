@@ -28,8 +28,16 @@
     </ion-slide>
 
     <ion-slide>
-       <h2>{{'WELCOME.SLIDE2.TITLE' | translate}}</h2>
+       <h2>{{'UNIT_OF_LENGTH.DEFAULT.LABEL' | translate}}</h2>
        <p>{{'WELCOME.SLIDE2.DESCRIPTION' | translate}}</p>
+      <ion-item>
+        <ion-label>Daenerys Targaryen</ion-label>
+        <ion-checkbox color="twitter" checked="true" (ionChange)="selectUnitOfLength(1)"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Daenerys Targaryen</ion-label>
+        <ion-checkbox color="twitter" checked="true" (ionChange)="selectUnitOfLength(2)"></ion-checkbox>
+      </ion-item>
     </ion-slide>
 
     <ion-slide>
