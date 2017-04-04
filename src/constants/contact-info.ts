@@ -9,9 +9,8 @@ export const github = {
     "url": ""
 };
 
-export const googlePlay ={
+export const googlePlay = {
     "appsUrlPrincipal": "https://play.google.com/store/apps/",
     "myApps": "developer?id=Anartz+Muxika",
     "serviraceApp": "details?id=com.amugika.servirace"
 };
-    
