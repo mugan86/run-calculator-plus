@@ -34,6 +34,8 @@ export class WelcomePage {
 
   selectUnitOfLength(value)
   {
+    this.unitLengths[0] = !this.unitLengths[0];
+    this.unitLengths[1] = !this.unitLengths[1];
     console.log(value);
   }
 
