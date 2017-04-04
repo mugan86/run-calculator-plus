@@ -74,6 +74,21 @@
 		"MIN_KM": "Velocidad (min/km)",
 		"M_S": "Velocidad (m/s)"
 	},
+	"UNIT_OF_LENGTH":
+	{
+		"DEFAULT": {
+			"code": "default-unit",
+			"label": "Selecciona una unidad de longitud"
+		},
+		"KM": {
+			"code": "km",
+			"label": "Kilómetros"
+		},
+		"MILE": {
+			"code": "mille",
+			"label": "Millas"
+		}
+	},
 	"WELCOME":{
 		"SLIDE1":{
 					"TITLE": "Bienvenido al Run Calculator Plus!",
