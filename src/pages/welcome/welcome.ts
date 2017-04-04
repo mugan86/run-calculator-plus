@@ -34,9 +34,24 @@ export class WelcomePage {
 
   selectUnitOfLength(value)
   {
-    this.unitLengths[0] = !this.unitLengths[0];
-    this.unitLengths[1] = !this.unitLengths[1];
     console.log(value);
+    if (value == 1)
+    {
+      if (this.unitLengths[0] == false)
+      {
+        this.unitLengths[0] = true;
+        this.unitLengths[1] = false;
+      }
+
+    }
+    if (value == 2)
+    {
+      if (this.unitLengths[1] == false)
+      {
+        this.unitLengths[0] = false;
+        this.unitLengths[1] = true;
+      }
+    }
   }
 
 }
