@@ -15,11 +15,14 @@ import { TranslateService } from 'ng2-translate';
 export class WelcomePage {
 
   unitLengths : Boolean[];
-
+  pepperoni: Boolean;
+  mushrooms: Boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
 
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
     this.unitLengths = [true, false];
+    this.pepperoni = true;
+    this.mushrooms = false;
   }
 
 
@@ -51,6 +54,20 @@ export class WelcomePage {
         this.unitLengths[0] = false;
         this.unitLengths[1] = true;
       }
+    }
+  }
+
+  test()
+  {
+    console.log(this.mushrooms);
+    console.log(this.pepperoni);
+    if (this.pepperoni == true)
+    {
+      this.mushrooms = false;
+    }
+    else
+    {
+      this.mushrooms = true;
     }
   }
 

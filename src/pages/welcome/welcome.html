@@ -25,6 +25,24 @@
       <h2>{{'WELCOME.SLIDE1.TITLE' | translate}}</h2>
       <p>{{'WELCOME.SLIDE1.DESCRIPTION' | translate}}</p>
        <ion-icon name="logo-twitter" style= "color: #55acee"></ion-icon>
+       <ion-list>
+
+          <ion-item>
+            <ion-label>Pepperoni</ion-label>
+            <ion-toggle [(ngModel)]="pepperoni" (ionChange)="test()"></ion-toggle>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Sausage</ion-label>
+            <ion-toggle [(ngModel)]="sausage" disabled="true"></ion-toggle>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Mushrooms</ion-label>
+            <ion-toggle [(ngModel)]="mushrooms" (ionChange)= "test()"></ion-toggle>
+          </ion-item>
+
+        </ion-list>
     </ion-slide>
 
     <ion-slide>
