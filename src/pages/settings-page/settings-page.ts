@@ -18,9 +18,12 @@ export class SettingsPage {
 
   //Page use values
   converter: RunConverter;
+
   languages: ILanguage[];
   language: string;
+
   unitOfLength: IUnitOfLength[];
+  unitLength: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
@@ -46,6 +49,7 @@ export class SettingsPage {
       { label: 'LANGUAGE.LABELS.RUSO', code: 'ru'}
     ];
 
+    this.unitLength = localStorage.getItem('unitOfLengthSelect');
     this.unitOfLength = [
       { 
         label: 'UNIT_OF_LENGTH.DEFAULT.LABEL', 
