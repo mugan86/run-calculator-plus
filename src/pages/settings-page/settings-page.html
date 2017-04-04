@@ -26,6 +26,14 @@
         </ion-select>
       </ion-item>
     </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>{{'UNIT_OF_LENGTH.DEFAULT' | translate}}</ion-label>
+        <ion-select [(ngModel)]="unitLength" (ngModelChange)="updateSelectLanguage($event)">
+          <ion-option *ngFor="let lang of languages" [value]="lang.code">{{lang.label | translate}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
     <ion-item-group>
       <ion-item-divider color="twitter">A</ion-item-divider>
       <ion-item>Angola</ion-item>
