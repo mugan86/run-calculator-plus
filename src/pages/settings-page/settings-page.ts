@@ -44,8 +44,23 @@ export class SettingsPage {
       { label: 'LANGUAGE.LABELS.JAPANESE', code: 'ja'},
       { label: 'LANGUAGE.LABELS.PORTUGUES', code: 'pt'},
       { label: 'LANGUAGE.LABELS.RUSO', code: 'ru'}
-
     ];
+
+    this.unitOfLength = [
+      { 
+        label: 'UNIT_OF_LENGTH.DEFAULT.LABEL', 
+        code: 'UNIT_OF_LENGTH.DEFAULT.LABEL'
+      },
+      { 
+        label: 'UNIT_OF_LENGTH.KM.LABEL', 
+        code: 'UNIT_OF_LENGTH.KM.LABEL'
+      },
+      { 
+        label: 'UNIT_OF_LENGTH.MILE.LABEL', 
+        code: 'UNIT_OF_LENGTH.MILE.LABEL'
+      }
+    ];
+
   }
 
   ionViewDidLoad() {
