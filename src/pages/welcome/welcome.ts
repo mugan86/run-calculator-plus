@@ -28,4 +28,9 @@ export class WelcomePage {
     this.navCtrl.push(MenuPrincipal);
   }
 
+  selectUnitOfLength(value)
+  {
+    console.log(value);
+  }
+
 }
