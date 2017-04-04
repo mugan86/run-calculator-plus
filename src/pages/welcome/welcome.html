@@ -31,12 +31,12 @@
        <h2>{{'UNIT_OF_LENGTH.DEFAULT.LABEL' | translate}}</h2>
        <p>{{'WELCOME.SLIDE2.DESCRIPTION' | translate}}</p>
       <ion-item>
-        <ion-label>Daenerys Targaryen</ion-label>
-        <ion-checkbox color="twitter" checked="true" (ionChange)="selectUnitOfLength(1)"></ion-checkbox>
+        <ion-label>{{'UNIT_OF_LENGTH.KM.LABEL' | translate}}</ion-label>
+        <ion-checkbox color="twitter" checked="{{unitLengths[0]}}" (ionChange)="selectUnitOfLength(1)"></ion-checkbox>
       </ion-item>
       <ion-item>
-        <ion-label>Daenerys Targaryen</ion-label>
-        <ion-checkbox color="twitter" checked="true" (ionChange)="selectUnitOfLength(2)"></ion-checkbox>
+        <ion-label>{{'UNIT_OF_LENGTH.MILE.LABEL' | translate}}</ion-label>
+        <ion-checkbox color="twitter" checked="{{unitLengths[1]}}" (ionChange)="selectUnitOfLength(2)"></ion-checkbox>
       </ion-item>
     </ion-slide>
 
