@@ -19,7 +19,7 @@ export class MyApp {
 
   //Define that page is main page (rootpage)
   rootPage: any;
-
+  selectColor = "lightseagreen";
 
 
   pages: Array<{title: string, component: any, icon: string}>;
