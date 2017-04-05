@@ -38,6 +38,13 @@ export class WelcomePage {
     console.log(defaultLanguage);
     
     translate.setDefaultLang(defaultLanguage);
+   
+
+    this.initializeValues()
+  }
+
+  private initializeValues()
+  {
     this.km = this. kmBeforeChange = true;
     this.mile = this.mileBeforeChange = false;
   }
