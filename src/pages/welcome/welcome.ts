@@ -45,7 +45,7 @@ export class WelcomePage {
   }
 
 
-  test()
+  manageUnitLengthsSelections()
   {
     console.log(this.km);
     console.log(this.mile);
