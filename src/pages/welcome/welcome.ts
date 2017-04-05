@@ -32,8 +32,8 @@ export class WelcomePage {
     console.log(defaultLanguage);
     
     translate.setDefaultLang(defaultLanguage);
-    this.km = true;
-    this.mile = false;
+    this.km = this. kmBeforeChange = true;
+    this.mile = this.mileBeforeChange = false;
   }
 
 
@@ -51,8 +51,11 @@ export class WelcomePage {
   {
     console.log(this.km);
     console.log(this.mile);
+     console.log("Before change");
+    console.log(this.kmBeforeChange);
+    console.log(this.mileBeforeChange);
     console.log("======================");
-    if (this.km == true && this.mile == true)
+    if (this.km == true && this.km != this.kmBeforeChange)
     {
       this.km = false;
       console.log("133");
