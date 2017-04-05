@@ -15,7 +15,9 @@ import { TranslateService } from 'ng2-translate';
 export class WelcomePage {
 
   km: Boolean;
+  kmBeforeChange: Boolean;
   mile: Boolean;
+  mileBeforeChange: Boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
     let defaultLanguage = navigator.language.split('-')[0];
     if (defaultLanguage != null)
