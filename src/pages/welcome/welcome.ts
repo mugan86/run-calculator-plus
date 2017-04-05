@@ -24,6 +24,8 @@ export class WelcomePage {
   kmBeforeChange: Boolean;
   mile: Boolean;
   mileBeforeChange: Boolean;
+
+  selectColor = "twitter";
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
     let defaultLanguage = navigator.language.split('-')[0];
     if (defaultLanguage != null)
