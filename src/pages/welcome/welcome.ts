@@ -45,8 +45,25 @@ export class WelcomePage {
 
   private initializeValues()
   {
+    //Unit of length options
     this.km = this. kmBeforeChange = true;
     this.mile = this.mileBeforeChange = false;
+
+    //Languages options
+    this.language = localStorage.getItem('selectLanguage');
+    this.languages = [
+      { label: 'LANGUAGE.LABELS.CATALA', code: 'ca'},
+      { label: 'LANGUAGE.LABELS.DEUTCH', code: 'de'},
+      { label: 'LANGUAGE.LABELS.ENGLISH', code: 'en'},
+      { label: 'LANGUAGE.LABELS.SPANISH', code: 'es'},
+      { label: 'LANGUAGE.LABELS.BASQUE', code: 'eu'},
+      { label: 'LANGUAGE.LABELS.FRANCAIS', code: 'fr'},
+      { label: 'LANGUAGE.LABELS.GALEGO', code: 'gl'},
+      { label: 'LANGUAGE.LABELS.ITALIANO', code: 'it'},
+      { label: 'LANGUAGE.LABELS.JAPANESE', code: 'ja'},
+      { label: 'LANGUAGE.LABELS.PORTUGUES', code: 'pt'},
+      { label: 'LANGUAGE.LABELS.RUSO', code: 'ru'}
+    ];
   }
 
 
