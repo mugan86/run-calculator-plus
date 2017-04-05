@@ -59,15 +59,34 @@ export class WelcomePage {
 
   test()
   {
-    console.log(this.mushrooms);
     console.log(this.pepperoni);
-    if (this.pepperoni == true)
+    console.log(this.mushrooms);
+    console.log("======================");
+    if (this.pepperoni == true && this.mushrooms == true)
+    {
+      this.pepperoni = false;
+      console.log("133");
+    }
+    else if (this.pepperoni == true)
     {
       this.mushrooms = false;
+      console.log("1");
     }
-    else
+    else if (this.pepperoni == false)
     {
       this.mushrooms = true;
+      console.log("2");
+
+    }
+     else if (this.mushrooms == false)
+    {
+      this.pepperoni = true;
+      console.log("3");
+    }
+    else if (this.mushrooms == true && this.pepperoni == true)
+    {
+      this.pepperoni = false;
+      console.log("4");
     }
   }
 
