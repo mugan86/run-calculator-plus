@@ -28,12 +28,12 @@
 
           <ion-item>
             <ion-label>{{'UNIT_OF_LENGTH.KM.LABEL' | translate}}</ion-label>
-            <ion-toggle [(ngModel)]="km" (ionChange)="manageUnitLengthsSelections()" color="twitter"></ion-toggle>
+            <ion-toggle [(ngModel)]="km" (ionChange)="manageUnitLengthsSelections()" color="{{selectColor}}"></ion-toggle>
           </ion-item>
 
           <ion-item>
             <ion-label>{{'UNIT_OF_LENGTH.MILE.LABEL' | translate}}</ion-label>
-            <ion-toggle [(ngModel)]="mile" (ionChange)= "manageUnitLengthsSelections()" color="twitter"></ion-toggle>
+            <ion-toggle [(ngModel)]="mile" (ionChange)= "manageUnitLengthsSelections()" color="{{selectColor}}"></ion-toggle>
           </ion-item>
 
         </ion-list>
@@ -52,7 +52,7 @@
     <ion-slide>
        <h2>{{'WELCOME.SLIDE4.TITLE' | translate}}</h2>
        <p>{{'WELCOME.SLIDE4.DESCRIPTION' | translate}}</p>
-       <button ion-button (click)="goToMenuPrincipal()" color="twitter">
+       <button ion-button (click)="goToMenuPrincipal()" color="{{selectColor}}">
           {{'SKIP' | translate}}
         </button>
     </ion-slide>
