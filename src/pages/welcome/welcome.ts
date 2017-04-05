@@ -14,7 +14,6 @@ import { TranslateService } from 'ng2-translate';
 })
 export class WelcomePage {
 
-  unitLengths : Boolean[];
   km: Boolean;
   mile: Boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
@@ -46,27 +45,6 @@ export class WelcomePage {
     this.navCtrl.push(MenuPrincipal);
   }
 
-  selectUnitOfLength(value)
-  {
-    console.log(value);
-    if (value == 1)
-    {
-      if (this.unitLengths[0] == false)
-      {
-        this.unitLengths[0] = true;
-        this.unitLengths[1] = false;
-      }
-
-    }
-    if (value == 2)
-    {
-      if (this.unitLengths[1] == false)
-      {
-        this.unitLengths[0] = false;
-        this.unitLengths[1] = true;
-      }
-    }
-  }
 
   test()
   {
