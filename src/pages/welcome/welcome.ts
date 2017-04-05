@@ -15,14 +15,14 @@ import { TranslateService } from 'ng2-translate';
 export class WelcomePage {
 
   unitLengths : Boolean[];
-  pepperoni: Boolean;
-  mushrooms: Boolean;
+  km: Boolean;
+  mile: Boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
 
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
     this.unitLengths = [true, false];
-    this.pepperoni = true;
-    this.mushrooms = false;
+    this.km = true;
+    this.mile = false;
   }
 
 
@@ -59,33 +59,33 @@ export class WelcomePage {
 
   test()
   {
-    console.log(this.pepperoni);
-    console.log(this.mushrooms);
+    console.log(this.km);
+    console.log(this.mile);
     console.log("======================");
-    if (this.pepperoni == true && this.mushrooms == true)
+    if (this.km == true && this.mile == true)
     {
-      this.pepperoni = false;
+      this.km = false;
       console.log("133");
     }
-    else if (this.pepperoni == true)
+    else if (this.km == true)
     {
-      this.mushrooms = false;
+      this.mile = false;
       console.log("1");
     }
-    else if (this.pepperoni == false)
+    else if (this.km == false)
     {
-      this.mushrooms = true;
+      this.mile = true;
       console.log("2");
 
     }
-     else if (this.mushrooms == false)
+     else if (this.mile == false)
     {
-      this.pepperoni = true;
+      this.km = true;
       console.log("3");
     }
-    else if (this.mushrooms == true && this.pepperoni == true)
+    else if (this.mile == true && this.km == true)
     {
-      this.pepperoni = false;
+      this.km = false;
       console.log("4");
     }
   }
