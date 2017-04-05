@@ -18,7 +18,14 @@
     <ion-slide>
        <h2>{{'LANGUAGE.SELECT' | translate}}</h2>
        <p>{{'WELCOME.SLIDE2.DESCRIPTION' | translate}}</p>
-      
+       <ion-list>
+          <ion-item>
+            <ion-label>{{'LANGUAGE.SELECT' | translate}}</ion-label>
+            <ion-select [(ngModel)]="language" (ngModelChange)="updateSelectLanguage($event)">
+              <ion-option *ngFor="let lang of languages" [value]="lang.code">{{lang.label | translate}}</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
     </ion-slide>
 
     <ion-slide>
