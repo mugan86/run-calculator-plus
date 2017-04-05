@@ -16,12 +16,12 @@
 
           <ion-item>
             <ion-label>{{'UNIT_OF_LENGTH.KM.LABEL' | translate}}</ion-label>
-            <ion-toggle [(ngModel)]="km" (ionChange)="test()" color="twitter"></ion-toggle>
+            <ion-toggle [(ngModel)]="km" (ionChange)="manageUnitLengthsSelections()" color="twitter"></ion-toggle>
           </ion-item>
 
           <ion-item>
             <ion-label>{{'UNIT_OF_LENGTH.MILE.LABEL' | translate}}</ion-label>
-            <ion-toggle [(ngModel)]="mile" (ionChange)= "test()" color="twitter"></ion-toggle>
+            <ion-toggle [(ngModel)]="mile" (ionChange)= "manageUnitLengthsSelections()" color="twitter"></ion-toggle>
           </ion-item>
 
         </ion-list>
