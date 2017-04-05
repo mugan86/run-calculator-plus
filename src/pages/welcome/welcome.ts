@@ -82,36 +82,36 @@ export class WelcomePage {
   {
     console.log(this.km);
     console.log(this.mile);
-     console.log("Before change");
     console.log(this.kmBeforeChange);
     console.log(this.mileBeforeChange);
-    console.log("======================");
-    if (this.km == true && this.km != this.kmBeforeChange)
+     /*console.log("Before change");
+    console.log(this.kmBeforeChange);
+    console.log(this.mileBeforeChange);
+    console.log("======================");*/
+    if (this.km == this.kmBeforeChange)
     {
-      this.km = false;
-      console.log("133");
+      this.mile = true;
+      this.mileBeforeChange = true;
+      console.log("KM false");
+    }
+    else if (this.mile == false)
+    {
+      this.km = true;
+      console.log("Mile false");
     }
     else if (this.km == true)
     {
       this.mile = false;
-      console.log("1");
+      console.log("KM true");
     }
-    else if (this.km == false)
-    {
-      this.mile = true;
-      console.log("2");
-
-    }
-     else if (this.mile == false)
-    {
-      this.km = true;
-      console.log("3");
-    }
-    else if (this.mile == true && this.km == true)
+    else if (this.mile == true)
     {
       this.km = false;
-      console.log("4");
+      console.log("Mile true");
     }
+    console.log(this.km);
+    console.log(this.mile);
+
   }
 
   updateSelectLanguage()
