@@ -11,7 +11,7 @@ import { TranslateService } from 'ng2-translate';
 export class MenuPrincipal {
   converter: RunConverter;
   convertions = [{icon: 'iii', label: 'Kms'}];
-  selectColor = "twitter";
+  selectColor = "lightseagreen";
   constructor(public navCtrl: NavController, public translate: TranslateService) {
 
     if (localStorage.getItem('welcomeComplete') != "1")
