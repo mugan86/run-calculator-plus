@@ -6,7 +6,7 @@
 -->
 
 <ion-content padding>
-  <button ion-button (click)="goToMenuPrincipal()">
+  <button ion-button (click)="goToMenuPrincipal()" color="twitter">
     {{'SKIP' | translate}}
   </button>
   <ion-slides pager>
@@ -19,12 +19,12 @@
 
           <ion-item>
             <ion-label>{{'UNIT_OF_LENGTH.KM.LABEL' | translate}}</ion-label>
-            <ion-toggle [(ngModel)]="km" (ionChange)="test()"></ion-toggle>
+            <ion-toggle [(ngModel)]="km" (ionChange)="test()" color="twitter"></ion-toggle>
           </ion-item>
 
           <ion-item>
             <ion-label>{{'UNIT_OF_LENGTH.MILE.LABEL' | translate}}</ion-label>
-            <ion-toggle [(ngModel)]="mile" (ionChange)= "test()"></ion-toggle>
+            <ion-toggle [(ngModel)]="mile" (ionChange)= "test()" color="twitter"></ion-toggle>
           </ion-item>
 
         </ion-list>
