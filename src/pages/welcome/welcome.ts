@@ -30,7 +30,6 @@ export class WelcomePage {
     console.log(defaultLanguage);
     
     translate.setDefaultLang(defaultLanguage);
-    this.unitLengths = [true, false];
     this.km = true;
     this.mile = false;
   }
