@@ -18,7 +18,7 @@ export class WelcomePage {
   km: Boolean;
   mile: Boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
-
+    console.log(navigator.language.split('-')[0]);
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
     this.unitLengths = [true, false];
     this.km = true;
