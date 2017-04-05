@@ -18,8 +18,19 @@ export class WelcomePage {
   km: Boolean;
   mile: Boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
-    console.log(navigator.language.split('-')[0]);
-    translate.setDefaultLang(localStorage.getItem('selectLanguage'));
+    let defaultLanguage = navigator.language.split('-')[0];
+    if (defaultLanguage != null)
+    {
+      localStorage.setItem('selectLanguage', defaultLanguage);
+    }
+    if ( localStorage.getItem('selectLanguage') == null || localStorage.getItem('selectLanguage') == "")
+    {
+      defaultLanguage = 'es';
+    }
+
+    console.log(defaultLanguage);
+    
+    translate.setDefaultLang(defaultLanguage);
     this.unitLengths = [true, false];
     this.km = true;
     this.mile = false;
