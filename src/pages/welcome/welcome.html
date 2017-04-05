@@ -6,10 +6,7 @@
 -->
 
 <ion-content padding>
-  <button ion-button (click)="goToMenuPrincipal()" color="twitter">
-    {{'SKIP' | translate}}
-  </button>
-  <ion-slides pager>
+  <ion-slides pager >
 
     <ion-slide>
       <h2>{{'WELCOME.SLIDE1.TITLE' | translate}}</h2>
@@ -43,6 +40,9 @@
     <ion-slide>
        <h2>{{'WELCOME.SLIDE4.TITLE' | translate}}</h2>
        <p>{{'WELCOME.SLIDE4.DESCRIPTION' | translate}}</p>
+       <button ion-button (click)="goToMenuPrincipal()" color="twitter">
+          {{'SKIP' | translate}}
+        </button>
     </ion-slide>
 
   </ion-slides>
