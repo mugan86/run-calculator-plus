@@ -10,6 +10,7 @@ import { TranslateService } from 'ng2-translate';
 })
 export class Page1 {
   converter: RunConverter;
+  selectColor = "twitter";
   constructor(public navCtrl: NavController, public translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
     this.converter= new RunConverter();
