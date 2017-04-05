@@ -5,7 +5,7 @@
       <h2>{{'WELCOME.SLIDE1.TITLE' | translate}}</h2>
       <p>{{'WELCOME.SLIDE1.DESCRIPTION' | translate}}</p>
        <!--<ion-icon name="logo-twitter" style= "color: #55acee"></ion-icon>-->
-       
+
     </ion-slide>
 
     <ion-slide>
@@ -13,9 +13,9 @@
        <p>{{'WELCOME.SLIDE2.DESCRIPTION' | translate}}</p>
        <ion-list>
           <ion-item>
-            <ion-label>{{'LANGUAGE.SELECT' | translate}}</ion-label>
-            <ion-select [(ngModel)]="language" (ngModelChange)="updateSelectLanguage($event)">
-              <ion-option *ngFor="let lang of languages" [value]="lang.code">{{lang.label | translate}}</ion-option>
+            <!--<ion-label>{{'LANGUAGE.SELECT' | translate}}</ion-label>-->
+            <ion-select [(ngModel)]="language" (ngModelChange)="updateSelectLanguage($event)" multiple="false">
+              <ion-option *ngFor="let lang of languages; let i = index" selected="{{language == lang.code}}" [value]="lang.code">{{lang.label | translate}}</ion-option>
             </ion-select>
           </ion-item>
         </ion-list>

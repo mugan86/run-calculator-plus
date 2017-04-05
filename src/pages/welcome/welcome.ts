@@ -36,9 +36,9 @@ export class WelcomePage {
     }
 
     console.log(defaultLanguage);
-    
+
     translate.setDefaultLang(defaultLanguage);
-   
+
 
     this.initializeValues()
   }
@@ -51,6 +51,7 @@ export class WelcomePage {
 
     //Languages options
     this.language = localStorage.getItem('selectLanguage');
+    console.info(this.language);
     this.languages = [
       { label: 'LANGUAGE.LABELS.CATALA', code: 'ca'},
       { label: 'LANGUAGE.LABELS.DEUTCH', code: 'de'},
@@ -111,6 +112,18 @@ export class WelcomePage {
       this.km = false;
       console.log("4");
     }
+  }
+
+  updateSelectLanguage()
+  {
+    if (this.language != localStorage.getItem('selectLanguage'))
+    {
+      console.info("Change from " + localStorage.getItem('selectLanguage') + " to " + this.language);
+      this.translate.setDefaultLang(this.language);
+      localStorage.setItem('selectLanguage', this.language);
+      this.initializeValues();
+    }
+
   }
 
 }
