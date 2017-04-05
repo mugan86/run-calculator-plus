@@ -13,6 +13,7 @@ import {email, github} from './../../constants/contact-info';
 export class Contact {
   converter: RunConverter;
   convertions = [{icon: 'iii', label: 'Kms'}];
+  selectColor = "twitter";
   constructor(public navCtrl: NavController, public translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
     this.converter= new RunConverter();
