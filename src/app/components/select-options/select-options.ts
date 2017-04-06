@@ -3,11 +3,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
 
-import {email, github} from './../../constants/contact-info';
-
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html'
+  selector: 'select-options',
+  templateUrl: 'select-options.html'
 })
 export class SelectOption {
   convertions = [{icon: 'iii', label: 'Kms'}];
