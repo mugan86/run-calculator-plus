@@ -75,20 +75,13 @@ export class SettingsPage {
 
   }
 
-  updateSelectUnitLength()
-  {
-    if (this.unitLength != localStorage.getItem('selectLanguage'))
-    {
-      console.info("Change from " + localStorage.getItem('unitOfLengthSelect') + " to " + this.unitLength);
-      localStorage.setItem('unitOfLengthSelect', this.unitLength);
-      this.initializeValues();
-    }
-  }
-
   manageUnitLengthsSelections(option)
   {
     if (option == 0) this.unitLenghts[1] = !this.unitLenghts[0];
     else this.unitLenghts[0] = !this.unitLenghts[1];
+
+    if (this.unitLenghts[0]) localStorage.setItem('unitOfLengthSelect', 'km');
+    else localStorage.setItem('unitOfLengthSelect', 'mile');
   }
 
 }
