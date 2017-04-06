@@ -74,6 +74,10 @@
 		"MIN_KM": "Velocidad (min/km)",
 		"M_S": "Velocidad (m/s)"
 	},
+	"THEME": {
+		"SELECT": "Seleccionar plantilla",
+		"COLOR_PREVIEW_TEXT": "Vista del color principal"
+	},
 	"UNIT_OF_LENGTH":
 	{
 		"LABELS": {

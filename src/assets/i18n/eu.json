@@ -74,6 +74,10 @@
 		"MIN_KM": "Abiadura (min/km)",
 		"M_S": "Abiadura (m/s)"
 	},
+	"THEME": {
+		"SELECT": "Aukeratu gustokoen kolorea",
+		"COLOR_PREVIEW_TEXT": "Aukeratutako kolore nagusia"
+	},
 	"UNIT_OF_LENGTH":
 	{
 		"LABELS": {
