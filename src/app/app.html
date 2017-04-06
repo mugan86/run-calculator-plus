@@ -12,7 +12,7 @@
         <ion-icon name="{{p.icon}}"></ion-icon> &nbsp;&nbsp;{{p.title | translate}}
       </button>
     </ion-list>
-    <div class="menuSection"><p class="title">Test</p></div>
+    <div class="menuSection"><p class="title {{selectColor}}">Test</p></div>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <!-- Advanced: explicity set the icon for each platform -->
