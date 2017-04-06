@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 import { MenuPrincipal } from './../menu-principal/menu-principal';
 import { TranslateService } from 'ng2-translate';
 import { ILanguage } from './../../interfaces/language';
@@ -21,9 +21,15 @@ export class WelcomePage {
 
   themeSelect: ITheme;
   themeListSelectValues: ITheme[];
+  
 
   selectColor = "twitter";
-  constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService, private menuCtrl: MenuController) {
+
+    //Disable Side menu
+    this.menuCtrl.enable(false);
+
+    
     let defaultLanguage = navigator.language.split('-')[0];
     if (defaultLanguage != null)
     {
