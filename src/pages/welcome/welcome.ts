@@ -67,9 +67,8 @@ export class WelcomePage {
 
   manageUnitLengthsSelections(option)
   {
-    console.log("receive value", option);
-   
-
+    if (option == 0) this.unitLenghts[1] = !this.unitLenghts[0];
+    else this.unitLenghts[0] = !this.unitLenghts[1];
   }
 
   updateSelectLanguage()
