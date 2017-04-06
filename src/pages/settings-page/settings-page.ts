@@ -47,10 +47,6 @@ export class SettingsPage {
 
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPagePage');
-  }
-
   updateSelectLanguage()
   {
     if (this.language != localStorage.getItem('selectLanguage'))
