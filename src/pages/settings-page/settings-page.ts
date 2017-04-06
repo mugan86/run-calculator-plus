@@ -31,6 +31,8 @@ export class SettingsPage {
   themeSelect: ITheme;
   themeListSelectValues: ITheme[];
 
+  selectColor : string;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
     this.converter= new RunConverter();
@@ -51,6 +53,8 @@ export class SettingsPage {
 
      //initialize app available all themesListSelection
      this.themeListSelectValues = themesListSelection;
+
+     this.selectColor = "violet";
 
   }
 
