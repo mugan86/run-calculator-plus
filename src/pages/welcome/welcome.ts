@@ -21,10 +21,7 @@ export class WelcomePage {
   languages: ILanguage[];
   language: string;
 
-  km: Boolean;
-  kmBeforeChange: Boolean;
-  mile: Boolean;
-  mileBeforeChange: Boolean;
+  unitLenghts: Boolean[];
 
   selectColor = "twitter";
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
@@ -49,8 +46,7 @@ export class WelcomePage {
   private initializeValues()
   {
     //Unit of length options
-    this.km = this. kmBeforeChange = true;
-    this.mile = this.mileBeforeChange = false;
+    this.unitLenghts = [true, false];
 
     //Languages options
     this.language = localStorage.getItem('selectLanguage');
@@ -69,39 +65,10 @@ export class WelcomePage {
   }
 
 
-  manageUnitLengthsSelections()
+  manageUnitLengthsSelections(option)
   {
-    console.log(this.km);
-    console.log(this.mile);
-    console.log(this.kmBeforeChange);
-    console.log(this.mileBeforeChange);
-     /*console.log("Before change");
-    console.log(this.kmBeforeChange);
-    console.log(this.mileBeforeChange);
-    console.log("======================");*/
-    if (this.km == this.kmBeforeChange)
-    {
-      this.mile = true;
-      this.mileBeforeChange = true;
-      console.log("KM false");
-    }
-    else if (this.mile == false)
-    {
-      this.km = true;
-      console.log("Mile false");
-    }
-    else if (this.km == true)
-    {
-      this.mile = false;
-      console.log("KM true");
-    }
-    else if (this.mile == true)
-    {
-      this.km = false;
-      console.log("Mile true");
-    }
-    console.log(this.km);
-    console.log(this.mile);
+    console.log("receive value", option);
+   
 
   }
 
