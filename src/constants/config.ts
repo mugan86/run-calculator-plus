@@ -12,4 +12,8 @@ export const languagesSelections = [
       { label: 'Pусский', code: 'ru'}
     ];
 
+export const themesListSelection = [
+
+];
+
   
