@@ -2,5 +2,6 @@ export const localStorage =
 {
   "selectLanguage": 'selectLanguage',
   "welcomeComplete": 'welcomeComplete',
-  "unitOfLengthSelect": 'unitOfLengthSelect'
+  "unitOfLengthSelect": 'unitOfLengthSelect',
+  "selectTheme": 'selectTheme'
 };
