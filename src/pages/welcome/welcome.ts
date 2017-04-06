@@ -36,11 +36,9 @@ export class WelcomePage {
     }
 
     console.log(defaultLanguage);
+    this.initializeValues();
 
     translate.setDefaultLang(defaultLanguage);
-
-
-    this.initializeValues()
   }
 
   private initializeValues()
@@ -49,9 +47,9 @@ export class WelcomePage {
     this.unitLenghts = [true, false];
 
     //Languages options
+    this.languages = languagesSelections;
     this.language = localStorage.getItem('selectLanguage');
     console.info(this.language);
-    this.languages = languagesSelections;
   }
 
 
