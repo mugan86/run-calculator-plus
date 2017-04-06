@@ -1,7 +1,7 @@
 /**
  * Interface to manage different slides
  */
-export interface ILanguage{
+export class ILanguage{
     //Slide code
     code: string;
     //Show slide title.
