@@ -29,6 +29,7 @@ export class SettingsPage {
   unitLenghts: Boolean[];
 
   themeSelect: ITheme;
+  themeListSelectValues: ITheme[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
@@ -47,6 +48,9 @@ export class SettingsPage {
      //Unit of length options
      if (this.unitLength == 'km') this.unitLenghts = [true, false];
      else this.unitLenghts = [false, true];
+
+     //initialize app available all themesListSelection
+     this.themeListSelectValues = themesListSelection;
 
   }
 
