@@ -25,6 +25,8 @@ export class SettingsPage {
   unitOfLength: IUnitOfLength[];
   unitLength: string;
 
+  unitLenghts: Boolean[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
     this.converter= new RunConverter();
@@ -61,6 +63,9 @@ export class SettingsPage {
       }
     ];
 
+     //Unit of length options
+    this.unitLenghts = [true, false];
+
   }
 
   ionViewDidLoad() {
@@ -87,6 +92,12 @@ export class SettingsPage {
       localStorage.setItem('unitOfLengthSelect', this.unitLength);
       this.initializeValues();
     }
+  }
+
+  manageUnitLengthsSelections(option)
+  {
+    if (option == 0) this.unitLenghts[1] = !this.unitLenghts[0];
+    else this.unitLenghts[0] = !this.unitLenghts[1];
   }
 
 }
