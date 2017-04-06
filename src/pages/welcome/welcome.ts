@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { MenuPrincipal } from './../menu-principal/menu-principal';
 import { TranslateService } from 'ng2-translate';
 import { ILanguage } from './../../interfaces/language';
+import { languagesSelections } from './../../constants/config';
 
 /*
   Generated class for the Welcome page.
@@ -54,19 +55,7 @@ export class WelcomePage {
     //Languages options
     this.language = localStorage.getItem('selectLanguage');
     console.info(this.language);
-    this.languages = [
-      { label: 'LANGUAGE.LABELS.CATALA', code: 'ca'},
-      { label: 'LANGUAGE.LABELS.DEUTCH', code: 'de'},
-      { label: 'LANGUAGE.LABELS.ENGLISH', code: 'en'},
-      { label: 'LANGUAGE.LABELS.SPANISH', code: 'es'},
-      { label: 'LANGUAGE.LABELS.BASQUE', code: 'eu'},
-      { label: 'LANGUAGE.LABELS.FRANCAIS', code: 'fr'},
-      { label: 'LANGUAGE.LABELS.GALEGO', code: 'gl'},
-      { label: 'LANGUAGE.LABELS.ITALIANO', code: 'it'},
-      { label: 'LANGUAGE.LABELS.JAPANESE', code: 'ja'},
-      { label: 'LANGUAGE.LABELS.PORTUGUES', code: 'pt'},
-      { label: 'LANGUAGE.LABELS.RUSO', code: 'ru'}
-    ];
+    this.languages = languagesSelections;
   }
 
 
