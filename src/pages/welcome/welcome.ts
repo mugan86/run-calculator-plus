@@ -86,4 +86,9 @@ export class WelcomePage {
 
   }
 
+  updateSelectTheme(theme)
+  {
+    console.log("Theme: ", theme);
+  }
+
 }
