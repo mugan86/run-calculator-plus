@@ -14,8 +14,8 @@
        <ion-list>
           <ion-item>
             <!--<ion-label>{{'LANGUAGE.SELECT' | translate}}</ion-label>-->
-            <ion-select [(ngModel)]="language" (ngModelChange)="updateSelectLanguage($event)" multiple="false">
-              <ion-option *ngFor="let lang of languages; let i = index" selected="{{language == lang.code}}" [value]="lang.code">{{lang.label | translate}}</ion-option>
+            <ion-select [(ngModel)]="language" (ngModelChange)="updateSelectLanguage($event)">
+              <ion-option *ngFor="let lang of languages" [value]="lang.code">{{lang.label}}</ion-option>
             </ion-select>
           </ion-item>
         </ion-list>
