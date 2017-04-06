@@ -13,7 +13,11 @@ export const languagesSelections = [
     ];
 
 export const themesListSelection = [
-
+  {id: "light", code: "#f4f4f4", name: "Light"},
+  {id: "twitter", code: "#55acee", name: "Twitter"},
+  {id: "lightseagreen", code: "#200b2aa", name: "Servirace"},
+  {id: "coral", code: "#ff7f50", name: "Coral"},
+  {id: "violet", code: "#ee82ee", name: "Violet"}
 ];
 
   
