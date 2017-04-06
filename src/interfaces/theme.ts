@@ -1,13 +1,11 @@
 /**
  * Interface to manage different slides
  */
-export interface Theme{
-    //Slide code
+export interface ITheme{
+    //Theme main color code
     code: string;
-    //Show slide title.
-    title: string;
-    //Show slide description
-    description: string;
-    //Show slide icon (optional)
-    icon?: string;
+    //Show theme name.
+    name: string;
+    //Show theme description
+    description?: string;
 }
