@@ -52,19 +52,10 @@ export class SettingsPage {
     ];
 
     this.unitLength = localStorage.getItem('unitOfLengthSelect');
-    this.unitOfLength = [
-      {
-        label: 'UNIT_OF_LENGTH.KM.LABEL',
-        code: 'km'
-      },
-      {
-        label: 'UNIT_OF_LENGTH.MILE.LABEL',
-        code: 'mille'
-      }
-    ];
 
      //Unit of length options
-    this.unitLenghts = [true, false];
+     if (this.unitLength == 'km') this.unitLenghts = [true, false];
+     else this.unitLenghts = [false, true];
 
   }
 
