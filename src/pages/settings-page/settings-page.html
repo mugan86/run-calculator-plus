@@ -1,12 +1,12 @@
 <ion-header>
   <ion-navbar color="twitter">
-
-    <ion-title>{{'SETTINGS' | translate}}</ion-title>
     <ion-buttons start>
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-   </ion-buttons>
+    </ion-buttons>
+    <ion-title>{{'SETTINGS' | translate}}</ion-title>
+    
 
    <ion-buttons end>
      <button ion-button icon-only>
@@ -26,14 +26,21 @@
         </ion-select>
       </ion-item>
     </ion-list>
-    <ion-list>
-      <ion-item>
-        <ion-label>{{'UNIT_OF_LENGTH.DEFAULT.LABEL' | translate}}</ion-label>
-        <ion-select [(ngModel)]="unitLength" (ngModelChange)="updateSelectUnitLength($event)">
-          <ion-option *ngFor="let unit of unitOfLength" [value]="unit.code">{{unit.label | translate}}</ion-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
+    <h2>{{'UNIT_OF_LENGTH.DEFAULT.LABEL' | translate}}</h2>
+       
+        <ion-list>
+
+          <ion-item>
+            <ion-label>{{'UNIT_OF_LENGTH.KM.LABEL' | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="unitLenghts[0]" (ionChange)="manageUnitLengthsSelections(0)" color="{{selectColor}}"></ion-toggle>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>{{'UNIT_OF_LENGTH.MILE.LABEL' | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="unitLenghts[1]" (ionChange)= "manageUnitLengthsSelections(1)" color="{{selectColor}}"></ion-toggle>
+          </ion-item>
+
+        </ion-list>
     <ion-item-group>
       <ion-item-divider color="twitter">A</ion-item-divider>
       <ion-item>Angola</ion-item>
