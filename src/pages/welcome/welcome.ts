@@ -3,14 +3,10 @@ import { NavController, NavParams } from 'ionic-angular';
 import { MenuPrincipal } from './../menu-principal/menu-principal';
 import { TranslateService } from 'ng2-translate';
 import { ILanguage } from './../../interfaces/language';
-import { languagesSelections } from './../../constants/config';
+import { ITheme } from './../../interfaces/theme';
+import { languagesSelections, themesListSelection} from './../../constants/config';
 
-/*
-  Generated class for the Welcome page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
@@ -22,6 +18,9 @@ export class WelcomePage {
   language: string;
 
   unitLenghts: Boolean[];
+
+  themeSelect: ITheme;
+  themeListSelectValues: ITheme[];
 
   selectColor = "twitter";
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
@@ -50,6 +49,9 @@ export class WelcomePage {
     this.languages = languagesSelections;
     this.language = localStorage.getItem('selectLanguage');
     console.info(this.language);
+
+    this.themeListSelectValues = themesListSelection;
+    this.themeSelect = this.themeListSelectValues[0];
   }
 
 
