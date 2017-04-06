@@ -1,6 +1,6 @@
 /**
  * Interface to manage different conversions
  */
-export class IConverter{
+export interface IConverter{
     
 }
