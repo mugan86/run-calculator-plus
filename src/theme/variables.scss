@@ -103,3 +103,29 @@ $navbars: (
 {
   color: black !important;
 }
+
+
+/*************************************************************
+Manage themes variations
+*************************************************************/
+
+
+.twitter{
+  background: color($colors, twitter)
+}
+
+.violet{
+  background: color($colors, violet)
+}
+
+.lightseagreen{
+  background: color($colors, lightseagreen);
+}
+
+.light{
+  background: color($colors, light)
+}
+
+.coral{
+  background: color($colors, coral)
+}
