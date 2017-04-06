@@ -67,6 +67,9 @@ export class WelcomePage {
   {
     if (option == 0) this.unitLenghts[1] = !this.unitLenghts[0];
     else this.unitLenghts[0] = !this.unitLenghts[1];
+
+    if (this.unitLenghts[0]) localStorage.setItem('unitOfLengthSelect', 'km');
+    else localStorage.setItem('unitOfLengthSelect', 'mile');
   }
 
   updateSelectLanguage()
