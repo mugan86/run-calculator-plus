@@ -41,13 +41,13 @@
 
     <ion-slide>
        <h2>{{'WELCOME.SLIDE4.TITLE' | translate}}</h2>
-       <p>{{'WELCOME.SLIDE4.DESCRIPTION' | translate}}</p>
+       <p class="{{themeSelect.id}}">{{'WELCOME.SLIDE4.DESCRIPTION' | translate}}</p>
        
-       <ion-list>
+       <ion-list >
           <ion-item>
             <!--<ion-label>{{'LANGUAGE.SELECT' | translate}}</ion-label>-->
             <ion-select [(ngModel)]="themeSelect" (ngModelChange)="updateSelectTheme(themeSelect)">
-              <ion-option *ngFor="let theme of themeListSelectValues" [value]="theme">{{theme.code}}</ion-option>
+              <ion-option *ngFor="let theme of themeListSelectValues" [value]="theme">{{theme.name}}</ion-option>
             </ion-select>
           </ion-item>
         </ion-list>
