@@ -6,6 +6,7 @@ import { TranslateService } from 'ng2-translate';
 import { RunConverter } from './../../models/run-converter';
 import { ILanguage } from './../../interfaces/language';
 import { IUnitOfLength } from './../../interfaces/unit-of-length';
+import { ITheme } from './../../interfaces/theme';
 
 //Constants
 import { languagesSelections, themesListSelection } from './../../constants/config';
