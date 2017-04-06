@@ -8,7 +8,7 @@ import { ILanguage } from './../../interfaces/language';
 import { IUnitOfLength } from './../../interfaces/unit-of-length';
 
 //Constants
-import { languagesSelections } from './../../constants/config';
+import { languagesSelections, themesListSelection } from './../../constants/config';
 
 @Component({
   selector: 'page-settings-page',
@@ -26,6 +26,8 @@ export class SettingsPage {
   unitLength: string;
 
   unitLenghts: Boolean[];
+
+  themeSelect: ITheme;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
