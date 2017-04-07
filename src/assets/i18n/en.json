@@ -76,6 +76,7 @@
 	},
 	"THEME": {
 		"SELECT": "Select template",
+		"CLICK_TO_SELECT_THEME": "Click here",
 		"COLOR_PREVIEW_TEXT": "Template principal color preview"
 	},
 	"UNIT_OF_LENGTH":
