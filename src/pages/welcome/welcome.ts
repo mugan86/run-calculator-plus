@@ -56,17 +56,6 @@ export class WelcomePage {
 
   private initializeValues()
   {
-    //Asign user default preferences settings to start
-    this.userPreferences = {
-                            "langCode": this.defaultLanguage, 
-                            "defaultTheme": "twitter",
-                            "welcomeComplete" : false,
-                            "unitOfLength": "km"
-                          };
-
-    
-    console.info(JSON.stringify(this.userPreferences));
-    
     //Unit of length options
     this.unitLenghts = [true, false];
 
@@ -76,7 +65,18 @@ export class WelcomePage {
     console.info(this.language);
 
     this.themeListSelectValues = themesListSelection;
-    this.themeSelect = this.themeListSelectValues[0];
+    this.themeSelect = this.themeListSelectValues[3];
+
+    //Asign user default preferences settings to start
+    this.userPreferences = {
+                            "langCode": this.defaultLanguage, 
+                            "defaultTheme": this.themeSelect,
+                            "welcomeComplete" : false,
+                            "unitOfLength": "km"
+                          };
+
+    
+    console.info(JSON.stringify(this.userPreferences));
   }
 
 
