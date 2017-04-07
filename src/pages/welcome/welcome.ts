@@ -68,14 +68,20 @@ export class WelcomePage {
     this.themeListSelectValues = themesListSelection;
     this.themeSelect = this.themeListSelectValues[3];
 
-    //Asign user default preferences settings to start
-    this.userPreferences = {
+    //Check if exist preferences values storage in local storage
+    if (JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))) {
+      console.log("contain storage");
+      this.userPreferences = JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))
+    }
+    else {
+      //Asign user default preferences settings to start
+      this.userPreferences = {
                             "langCode": this.defaultLanguage, 
                             "defaultTheme": this.themeSelect,
                             "welcomeComplete" : false,
                             "unitOfLength": "km"
                           };
-
+    }
     
     console.info(JSON.stringify(this.userPreferences));
   }
@@ -116,6 +122,7 @@ export class WelcomePage {
   {
     console.log("Theme: ", theme , localStorageValues[4]);
     console.info(JSON.stringify(this.userPreferences));
+    //Convert object to string and save in local storage
     localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(this.userPreferences));
   }
 
