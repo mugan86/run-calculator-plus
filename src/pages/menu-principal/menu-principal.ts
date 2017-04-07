@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import { RunConverter } from './../../models/run-converter';
 import { TranslateService } from 'ng2-translate';
 
@@ -12,8 +12,10 @@ export class MenuPrincipal {
   converter: RunConverter;
   convertions = [{icon: 'iii', label: 'Kms'}];
   selectColor = "lightseagreen";
-  constructor(public navCtrl: NavController, public translate: TranslateService) {
+  constructor(public navCtrl: NavController, public translate: TranslateService, private menuCtrl: MenuController) {
 
+    //Active menu
+    this.menuCtrl.enable(true);
     if (localStorage.getItem('welcomeComplete') != "1")
     {
       //Finish to view welcome page
