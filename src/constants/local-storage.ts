@@ -1,7 +1,8 @@
-export const localStorage =
+export const localStorageValues =
 {
   "selectLanguage": 'selectLanguage',
   "welcomeComplete": 'welcomeComplete',
   "unitOfLengthSelect": 'unitOfLengthSelect',
-  "selectTheme": 'selectTheme'
+  "selectTheme": 'selectTheme',
+  "userPreferences": 'userPreferences'
 };
