@@ -4,6 +4,7 @@ import { MenuPrincipal } from './../menu-principal/menu-principal';
 import { TranslateService } from 'ng2-translate';
 import { ILanguage } from './../../interfaces/language';
 import { ITheme } from './../../interfaces/theme';
+import { ISettings } from './../../interfaces/settings';
 import { languagesSelections, themesListSelection} from './../../constants/config';
 
 
@@ -24,13 +25,17 @@ export class WelcomePage {
   
 
   selectColor = "twitter";
-  constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService, private menuCtrl: MenuController) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+                public translate: TranslateService, private menuCtrl: MenuController,
+                private userPreferences: ISettings, private defaultLanguage: string) {
 
     //Disable Side menu
     this.menuCtrl.enable(false);
 
+   
     
-    let defaultLanguage = navigator.language.split('-')[0];
+    defaultLanguage = navigator.language.split('-')[0];
     if (defaultLanguage != null)
     {
       localStorage.setItem('selectLanguage', defaultLanguage);
@@ -48,6 +53,13 @@ export class WelcomePage {
 
   private initializeValues()
   {
+    //Asign user default preferences settings to start
+    this.userPreferences = {
+                            "langCode": this.defaultLanguage, 
+                            "defaultTheme": "twitter",
+                            "welcomeComplete" : false,
+                            "unitOfLength": "km"
+                          }
     //Unit of length options
     this.unitLenghts = [true, false];
 
