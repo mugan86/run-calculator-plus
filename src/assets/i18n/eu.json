@@ -76,6 +76,7 @@
 	},
 	"THEME": {
 		"SELECT": "Aukeratu gustokoen kolorea",
+		"CLICK_TO_SELECT_THEME": "Klik hemen",
 		"COLOR_PREVIEW_TEXT": "Aukeratutako kolore nagusia"
 	},
 	"UNIT_OF_LENGTH":
