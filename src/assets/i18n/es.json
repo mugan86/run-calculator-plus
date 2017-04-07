@@ -76,6 +76,7 @@
 	},
 	"THEME": {
 		"SELECT": "Seleccionar plantilla",
+		"CLICK_TO_SELECT_THEME": "Pulsa aquí",
 		"COLOR_PREVIEW_TEXT": "Vista del color principal"
 	},
 	"UNIT_OF_LENGTH":
