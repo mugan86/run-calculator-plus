@@ -26,29 +26,32 @@ export class WelcomePage {
 
   selectColor = "twitter";
 
+  userPreferences: ISettings;
+  defaultLanguage: string;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, 
                 public translate: TranslateService, private menuCtrl: MenuController,
-                private userPreferences: ISettings, private defaultLanguage: string) {
+                ) {
 
     //Disable Side menu
     this.menuCtrl.enable(false);
 
    
     
-    defaultLanguage = navigator.language.split('-')[0];
-    if (defaultLanguage != null)
+    this.defaultLanguage = navigator.language.split('-')[0];
+    if (this.defaultLanguage != null)
     {
-      localStorage.setItem('selectLanguage', defaultLanguage);
+      localStorage.setItem('selectLanguage', this.defaultLanguage);
     }
     if ( localStorage.getItem('selectLanguage') == null || localStorage.getItem('selectLanguage') == "")
     {
-      defaultLanguage = 'es';
+      this.defaultLanguage = 'es';
     }
 
-    console.log(defaultLanguage);
+    console.log(this.defaultLanguage);
     this.initializeValues();
 
-    translate.setDefaultLang(defaultLanguage);
+    translate.setDefaultLang(this.defaultLanguage);
   }
 
   private initializeValues()
@@ -59,7 +62,11 @@ export class WelcomePage {
                             "defaultTheme": "twitter",
                             "welcomeComplete" : false,
                             "unitOfLength": "km"
-                          }
+                          };
+
+    
+    console.info(JSON.stringify(this.userPreferences));
+    
     //Unit of length options
     this.unitLenghts = [true, false];
 
