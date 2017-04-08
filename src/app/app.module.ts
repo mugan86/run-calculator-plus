@@ -21,6 +21,7 @@ import { DefaultImage } from './../directives/default-image';
 
 //Services
 import { ConvertedService } from "./../services/converter";
+import { SettingsService } from './../services/settings';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,6 @@ import { ConvertedService } from "./../services/converter";
     Page1,
     Page2, Page3, MenuPrincipal, Contact, SettingsPage, WelcomePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ConvertedService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ConvertedService, SettingsService]
 })
 export class AppModule {}
