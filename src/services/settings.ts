@@ -1,5 +1,5 @@
 import { ISettings } from './../interfaces/settings';
-import { localStorageValues } from './../../constants/local-storage';
+import { localStorageValues } from './../constants/local-storage';
 
 export class SettingsService {
 
@@ -15,8 +15,16 @@ export class SettingsService {
 
     getSelectLanguage()
     {
-
+        return this.ourPreferences.langCode;
     }
 
-    
+    getSelectUnitLength()
+    {
+        return this.ourPreferences.unitOfLength;
+    }
+
+    isWelcomeComplete()
+    {
+        return this.ourPreferences.welcomeComplete;
+    }
 }
