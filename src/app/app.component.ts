@@ -9,6 +9,8 @@ import { Contact } from './../pages/contact/contact';
 import { SettingsPage } from './../pages/settings-page/settings-page';
 import { WelcomePage } from './../pages/welcome/welcome';
 
+import { SettingsService } from "./../services/settings";
+
 
 @Component({
   selector: 'app-page',
@@ -24,9 +26,10 @@ export class MyApp {
 
   pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(public platform: Platform) {
+  constructor(public platform: Platform, private settings: SettingsService) {
 
-    if (localStorage.getItem('welcomeComplete') == "1") this.rootPage = MenuPrincipal;
+
+    if (settings.isWelcomeComplete()) this.rootPage = MenuPrincipal;
     else this.rootPage = WelcomePage;
 
     /*************************************************************************
