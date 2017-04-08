@@ -1,11 +1,36 @@
 import { ISettings } from './../interfaces/settings';
+import { ITheme } from './../interfaces/theme';
+import { ILanguage } from './../interfaces/language';
 import { localStorageValues } from './../constants/local-storage';
+import { languagesSelections, themesListSelection} from './../constants/config';
 
 export class SettingsService {
 
     ourPreferences: ISettings;
+
+    //Languages
+    languages: ILanguage[];
+    language: string;
+
+    unitLenghts: Boolean[];
+
+    themeSelect: ITheme;
+    themeListSelectValues: ITheme[];
+
+    userPreferences: ISettings;
+    defaultLanguage: string;
     constructor() { 
-        this.ourPreferences = JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))
+        if (JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))) {
+            this.ourPreferences = JSON.parse(localStorage.getItem(localStorageValues['userPreferences']));
+        }
+        else{
+            this.ourPreferences = {
+                            "langCode": this.defaultLanguage, 
+                            "defaultTheme": this.themeSelect,
+                            "welcomeComplete" : false,
+                            "unitOfLength": "km"
+                          };
+        }
     }
 
     getTheme()
@@ -25,6 +50,7 @@ export class SettingsService {
 
     isWelcomeComplete()
     {
+        if (this.ourPreferences.welcomeComplete === null) return false;
         return this.ourPreferences.welcomeComplete;
     }
 
