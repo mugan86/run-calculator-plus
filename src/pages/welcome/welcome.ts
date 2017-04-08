@@ -97,6 +97,8 @@ export class WelcomePage {
 
   goToMenuPrincipal()
   {
+
+    //TODO : Update local preferences before go to Menu principal!!
     this.navCtrl.push(MenuPrincipal);
   }
 
