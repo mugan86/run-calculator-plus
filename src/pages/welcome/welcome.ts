@@ -69,7 +69,7 @@ export class WelcomePage {
     //Check if exist preferences values storage in local storage
     if (JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))) {
       console.log("contain storage");
-      this.userPreferences = JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))
+      this.userPreferences = JSON.parse(localStorage.getItem(localStorageValues['userPreferences']));
     }
     else {
       //Asign user default preferences settings to start
