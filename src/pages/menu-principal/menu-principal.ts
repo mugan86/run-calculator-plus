@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 import { RunConverter } from './../../models/run-converter';
 import { TranslateService } from 'ng2-translate';
+import { SettingsService } from "./../../services/settings";
 
 @Component({
   selector: 'page-menu-principal',
