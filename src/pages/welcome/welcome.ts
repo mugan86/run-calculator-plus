@@ -62,8 +62,6 @@ export class WelcomePage {
 
     //Languages options
     this.languages = languagesSelections;
-    this.language = localStorage.getItem('selectLanguage');
-    console.info(this.language);
 
     this.themeListSelectValues = themesListSelection;
     this.themeSelect = this.themeListSelectValues[3];
@@ -82,6 +80,12 @@ export class WelcomePage {
                             "unitOfLength": "km"
                           };
     }
+
+    //Important to add in ngModel select value of theme!!!
+    this.themeSelect = this.userPreferences.defaultTheme;
+    //Important to add in ngModel select value of theme!!!
+    this.language = this.userPreferences.langCode;
+    console.info(this.language);
     
     console.info(JSON.stringify(this.userPreferences));
   }
