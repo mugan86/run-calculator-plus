@@ -5,6 +5,7 @@ import { RunConverter } from './../../models/run-converter';
 import { TranslateService } from 'ng2-translate';
 import { SettingsService } from "./../../services/settings";
 
+
 @Component({
   selector: 'page-menu-principal',
   templateUrl: 'menu-principal.html'
@@ -13,13 +14,21 @@ export class MenuPrincipal {
   converter: RunConverter;
   convertions = [{icon: 'iii', label: 'Kms'}];
   selectColor = "lightseagreen";
-  constructor(public navCtrl: NavController, public translate: TranslateService, private menuCtrl: MenuController) {
+  constructor(public navCtrl: NavController, public translate: TranslateService, 
+              private menuCtrl: MenuController, private settings: SettingsService) {
+
 
     //Active menu
     this.menuCtrl.enable(true);
+
+    console.log("Welcome COmplete? " +  settings.isWelcomeComplete());
     
-    if (localStorage.getItem('welcomeComplete') != "1")
+    if (!settings.isWelcomeComplete())
     {
+      console.log("Update preferences!!");
+      settings.ourPreferences.welcomeComplete = true;
+      
+      settings.updatePreferences(settings.ourPreferences);
       //Finish to view welcome page
       localStorage.setItem('welcomeComplete', "1");
       window.location.reload();
