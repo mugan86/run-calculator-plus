@@ -21,7 +21,7 @@ export class MenuPrincipal {
     //Active menu
     this.menuCtrl.enable(true);
 
-    console.log("Welcome COmplete? " +  settings.isWelcomeComplete());
+    //console.log("Welcome COmplete? " +  settings.isWelcomeComplete());
     
     if (!settings.isWelcomeComplete())
     {
@@ -29,8 +29,7 @@ export class MenuPrincipal {
       settings.ourPreferences.welcomeComplete = true;
       
       settings.updatePreferences(settings.ourPreferences);
-      //Finish to view welcome page
-      localStorage.setItem('welcomeComplete', "1");
+      //Finish to view welcome page and reload only this time
       window.location.reload();
     }
 
