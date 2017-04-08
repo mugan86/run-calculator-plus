@@ -1,8 +1,22 @@
 import { ISettings } from './../interfaces/settings';
+import { localStorageValues } from './../../constants/local-storage';
 
-export class ConvertedService {
+export class SettingsService {
 
-    constructor() { }
+    ourPreferences: ISettings;
+    constructor() { 
+        this.ourPreferences = JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))
+    }
+
+    getTheme()
+    {
+        return this.ourPreferences.defaultTheme;
+    }
+
+    getSelectLanguage()
+    {
+
+    }
 
     
 }
