@@ -16,10 +16,12 @@ export class MenuPrincipal {
 
     //Active menu
     this.menuCtrl.enable(true);
+    
     if (localStorage.getItem('welcomeComplete') != "1")
     {
       //Finish to view welcome page
       localStorage.setItem('welcomeComplete', "1");
+      window.location.reload();
     }
 
 
