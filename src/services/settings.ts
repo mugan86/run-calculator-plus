@@ -27,4 +27,9 @@ export class SettingsService {
     {
         return this.ourPreferences.welcomeComplete;
     }
+
+    updatePreferences(preferences)
+    {
+        localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(preferences));
+    }
 }
