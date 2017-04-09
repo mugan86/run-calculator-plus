@@ -21,6 +21,8 @@ export class MenuPrincipal {
     //Active menu
     this.menuCtrl.enable(true);
 
+    //settings.
+
     //console.log("Welcome COmplete? " +  settings.isWelcomeComplete());
     
     if (!settings.isWelcomeComplete())
