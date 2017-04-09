@@ -10,7 +10,7 @@ import { ISettings } from './../../../interfaces/settings';
 })
 export class SelectOption {
   @Input() minValue: number = 0;
-  @Input() maxValue: number = 10000;
+
   //Manage select option type (hour, min, second, kms,...)
   @Input() type: string;
 
