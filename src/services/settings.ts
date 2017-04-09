@@ -2,7 +2,6 @@ import { ISettings } from './../interfaces/settings';
 import { ITheme } from './../interfaces/theme';
 import { ILanguage } from './../interfaces/language';
 import { localStorageValues } from './../constants/local-storage';
-import { languagesSelections, themesListSelection} from './../constants/config';
 
 export class SettingsService {
 
@@ -33,6 +32,9 @@ export class SettingsService {
         }
     }
 
+    /******************************************************************************************
+     * Function to return save user preferences or if not exist, return default preferences
+     ******************************************************************************************/
     getUserPreferences()
     {
         if (JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))) {
