@@ -21,7 +21,8 @@ export class MenuPrincipal {
     //Active menu
     this.menuCtrl.enable(true);
 
-    //settings.
+    //Load user preferences
+    settings.ourPreferences = settings.getUserPreferences();
 
     //console.log("Welcome COmplete? " +  settings.isWelcomeComplete());
     
