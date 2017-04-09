@@ -10,7 +10,7 @@ import { SettingsService } from "./../../services/settings";
   templateUrl: 'menu-principal.html'
 })
 export class MenuPrincipal {
-  selectColor = "lightseagreen";
+  selectColor = "violet";
   constructor(public navCtrl: NavController, public translate: TranslateService, 
               private menuCtrl: MenuController, private settings: SettingsService) {
     //Active menu
