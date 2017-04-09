@@ -7,6 +7,7 @@ import { ITheme } from './../../interfaces/theme';
 import { ISettings } from './../../interfaces/settings';
 import { languagesSelections, themesListSelection} from './../../constants/config';
 import { localStorageValues } from './../../constants/local-storage';
+import { SettingsService } from "./../../services/settings";
 
 
 @Component({
@@ -32,7 +33,7 @@ export class WelcomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
                 public translate: TranslateService, private menuCtrl: MenuController,
-                ) {
+                private settings: SettingsService) {
 
     //Disable Side menu
     this.menuCtrl.enable(false);
@@ -97,8 +98,10 @@ export class WelcomePage {
 
   goToMenuPrincipal()
   {
-
     //TODO : Update local preferences before go to Menu principal!!
+    this.settings.updatePreferences(this.userPreferences);
+
+    //Open Menu Principal
     this.navCtrl.push(MenuPrincipal);
   }
 
