@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="{{selectColor}}" hideBackButton="true">
+  <ion-navbar color="{{settings.getTheme().id}}" hideBackButton="true">
     <ion-buttons start>
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -65,11 +65,11 @@
 </ion-card>
 
   <button ion-button secondary menuToggle>Open converter options</button>
-  <button ion-button color="{{selectColor}}" (click)="makeBasicConversion()">I'm a button</button>
-  <button ion-button color="{{selectColor}}" full>Show Local Notification</button>
+  <button ion-button color="{{settings.getTheme().id}}" (click)="makeBasicConversion()">I'm a button</button>
+  <button ion-button color="{{settings.getTheme().id}}" full>Show Local Notification</button>
   <button ion-button color="primary" full>Full Button</button>
   <ion-fab right bottom>
-  <button ion-fab color="{{selectColor}}"> <ion-icon name="md-share"></ion-icon></button>
+  <button ion-fab color="{{settings.getTheme().id}}"> <ion-icon name="md-share"></ion-icon></button>
   <ion-fab-list side="left">
     <button ion-fab><ion-icon name="logo-youtube"></ion-icon></button>
     <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
