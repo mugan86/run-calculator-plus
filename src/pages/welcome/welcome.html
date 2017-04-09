@@ -1,5 +1,5 @@
 <ion-content padding>
-  <ion-slides pager class="{{userPreferences.defaultTheme.id}}-slider">
+  <ion-slides pager class="{{selectColor}}-slider">
 
     <ion-slide>
       <h2>{{'WELCOME.SLIDE1.TITLE' | translate}}</h2>
@@ -28,12 +28,12 @@
 
           <ion-item>
             <ion-label>{{'UNIT_OF_LENGTH.KM.LABEL' | translate}}</ion-label>
-            <ion-toggle [(ngModel)]="unitLenghts[0]" (ionChange)="manageUnitLengthsSelections(0)" color="{{userPreferences.defaultTheme.id}}"></ion-toggle>
+            <ion-toggle [(ngModel)]="unitLenghts[0]" (ionChange)="manageUnitLengthsSelections(0)" color="{{selectColor}}"></ion-toggle>
           </ion-item>
 
           <ion-item>
             <ion-label>{{'UNIT_OF_LENGTH.MILE.LABEL' | translate}}</ion-label>
-            <ion-toggle [(ngModel)]="unitLenghts[1]" (ionChange)= "manageUnitLengthsSelections(1)" color="{{userPreferences.defaultTheme.id}}"></ion-toggle>
+            <ion-toggle [(ngModel)]="unitLenghts[1]" (ionChange)= "manageUnitLengthsSelections(1)" color="{{selectColor}}"></ion-toggle>
           </ion-item>
 
         </ion-list>
@@ -51,7 +51,7 @@
             </ion-select>
           </ion-item>
         </ion-list>
-        <ion-item color="{{userPreferences.defaultTheme.id}}"> {{'THEME.COLOR_PREVIEW_TEXT' | translate}}</ion-item>
+        <ion-item color="{{selectColor}}"> {{'THEME.COLOR_PREVIEW_TEXT' | translate}}</ion-item>
     </ion-slide>
 
     <ion-slide>
@@ -62,7 +62,7 @@
     <ion-slide>
        <h2>{{'WELCOME.SLIDE4.TITLE' | translate}}</h2>
        <p>{{'WELCOME.SLIDE4.DESCRIPTION' | translate}}</p>
-       <button ion-button (click)="goToMenuPrincipal()" color="{{userPreferences.defaultTheme.id}}">
+       <button ion-button (click)="goToMenuPrincipal()" color="{{selectColor}}">
           {{'SKIP' | translate}}
         </button>
     </ion-slide>
