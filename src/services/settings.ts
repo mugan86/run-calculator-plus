@@ -56,6 +56,7 @@ export class SettingsService {
 
     updatePreferences(preferences)
     {
+        console.warn("Update preferences: " , preferences);
         localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(preferences));
     }
 }
