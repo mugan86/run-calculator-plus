@@ -33,6 +33,18 @@ export class SettingsService {
         }
     }
 
+    getUserPreferences()
+    {
+        if (JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))) {
+            return JSON.parse(localStorage.getItem(localStorageValues['userPreferences']));
+        }
+        return  {   "langCode": this.defaultLanguage, 
+                    "defaultTheme": this.themeSelect,
+                    "welcomeComplete" : false,
+                    "unitOfLength": "km"
+                };
+    }
+
     getTheme()
     {
         return this.ourPreferences.defaultTheme;
