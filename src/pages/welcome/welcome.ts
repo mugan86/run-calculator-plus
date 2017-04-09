@@ -80,6 +80,8 @@ export class WelcomePage {
                             "welcomeComplete" : false,
                             "unitOfLength": "km"
                           };
+
+      this.settings.updatePreferences(this.userPreferences);
     }
 
     //Important to add in ngModel select value of theme!!!
@@ -88,7 +90,7 @@ export class WelcomePage {
     this.language = this.userPreferences.langCode;
     console.info(this.language);
     
-    console.info(JSON.stringify(this.userPreferences));
+    console.info("Preferences: "  + JSON.stringify(this.userPreferences));
   }
 
 
