@@ -28,20 +28,22 @@ export class MyApp {
 
   constructor(public platform: Platform, private settings: SettingsService) {
 
-
+    settings.ourPreferences = settings.ourPreferences = settings.getUserPreferences();
     if (settings.isWelcomeComplete()) this.rootPage = MenuPrincipal;
     else this.rootPage = WelcomePage;
+
+    this.selectColor = settings.getTheme().id;
 
     /*************************************************************************
     Check if language select, if not select nothing, set 'en'
     *************************************************************************/
 
-    console.info("Select language: " + localStorage.getItem('selectLanguage'));
+    /*console.info("Select language: " + localStorage.getItem('selectLanguage'));
     if (localStorage.getItem('selectLanguage') == null || localStorage.getItem('selectLanguage') == "null")
     {
       localStorage.setItem('selectLanguage', 'en');
       console.info("Change language to " + localStorage.getItem('selectLanguage'));
-    }
+    }*/
 
     //Start app
     this.initializeApp();
