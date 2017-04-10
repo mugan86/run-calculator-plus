@@ -38,19 +38,6 @@ export class WelcomePage {
     //Disable Side menu
     this.menuCtrl.enable(false);
 
-   
-    
-    this.defaultLanguage = navigator.language.split('-')[0];
-    if (this.defaultLanguage != null)
-    {
-      localStorage.setItem('selectLanguage', this.defaultLanguage);
-    }
-    if ( localStorage.getItem('selectLanguage') == null || localStorage.getItem('selectLanguage') == "")
-    {
-      this.defaultLanguage = 'es';
-    }
-
-    console.log(this.defaultLanguage);
     this.initializeValues();
 
     translate.setDefaultLang(this.defaultLanguage);
@@ -63,6 +50,13 @@ export class WelcomePage {
 
     //Languages options
     this.languages = languagesSelections;
+    //Manage language
+    this.defaultLanguage = navigator.language.split('-')[0];
+
+    if (this.defaultLanguage != null)
+    {
+      this.defaultLanguage = 'es';
+    }
 
     this.themeListSelectValues = themesListSelection;
     this.themeSelect = this.themeListSelectValues[3];
@@ -90,9 +84,7 @@ export class WelcomePage {
     this.language = this.userPreferences.langCode;
 
     this.updateSelectColor( this.themeSelect.id );
-    console.info(this.language);
-    
-    console.info("Preferences: "  + JSON.stringify(this.userPreferences));
+   
   }
 
 
