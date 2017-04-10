@@ -5,22 +5,26 @@
 
 //Slider pagination active color
 
-.lightseagreen-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active{
+.lightseagreen-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: color($colors, lightseagreen)
 }
 
-.violet-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active{
+.violet-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: color($colors, violet)
 }
 
-.twitter-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active{
+.twitter-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: color($colors, twitter)
 }
 
-.coral-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active{
+.coral-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: color($colors, coral)
 }
 
-.light-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active{
+.light-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active { 
   background: color($colors, light)
+}
+
+.danger-slider button.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: color($colors, danger);
 }
