@@ -30,6 +30,8 @@ export class MenuPrincipal {
       window.location.reload();
     }
     translate.setDefaultLang(settings.getSelectLanguage());
+
+    this.selectColor = settings.getTheme().id;
   }
 
 }
