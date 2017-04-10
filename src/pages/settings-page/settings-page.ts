@@ -55,6 +55,7 @@ export class SettingsPage {
      this.themeListSelectValues = themesListSelection;
 
      this.selectColor = this.settings.getTheme().id;
+     console.warn(this.selectColor, this.settings.getTheme());
 
   }
 
@@ -64,7 +65,6 @@ export class SettingsPage {
     {
       console.info("Change from " + localStorage.getItem('selectLanguage') + " to " + this.language);
       this.translate.setDefaultLang(this.language);
-      localStorage.setItem('selectLanguage', this.language);
       this.initializeValues();
     }
 
