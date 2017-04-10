@@ -108,32 +108,25 @@
 		"DESCRIPTION": "",
 		"SLIDE1":{
 					"DESCRIPTION": "",
-					"TITLE": "Bienvenido al Run Calculator Plus!",
-					"MILES_H": "Velocidad (miles/h)",
-					"MIN_KM": "Velocidad (min/km)",
-					"M_S": "Velocidad (m/s)"
+					"TITLE": "Welcome to Run Calculator Plus!"
 		},
 		"SLIDE2":{
 					"DESCRIPTION": "",
-					"TITLE": "Velocidad (km/h)",
-					"MILES_H": "Velocidad (miles/h)",
-					"MIN_KM": "Velocidad (min/km)",
-					"M_S": "Velocidad (m/s)"
+					"TITLE": "Velocidad (km/h)"
 		},
 		"SLIDE3":{
 					"DESCRIPTION": "",
-					"TITLE": "Velocidad (km/h)",
-					"MILES_H": "Velocidad (miles/h)",
-					"MIN_KM": "Velocidad (min/km)",
-					"M_S": "Velocidad (m/s)"
+					"TITLE": "Velocidad (km/h)"
 		},
 		"SLIDE4":{
 					"DESCRIPTION": "",
-					"TITLE": "Velocidad (km/h)",
-					"MILES_H": "Velocidad (miles/h)",
-					"MIN_KM": "Velocidad (min/km)",
-					"M_S": "Velocidad (m/s)"
+					"TITLE": "Velocidad (km/h)"
 		},
-		"TITLE": "Welcome!!"
+		"SLIDE_FINAL":{
+					"DESCRIPTION": "",
+					"TITLE": "Velocidad (km/h)"
+		},
+		"TITLE": "Welcome!!",
+		"I_COMPLETE_ALL": "Go To principal"
 	}
 }
