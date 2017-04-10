@@ -1,9 +1,5 @@
 import { Component, Input } from '@angular/core';
 
-import { ILanguage } from './../../../interfaces/language';
-import { ITheme } from './../../../interfaces/theme';
-import { ISettings } from './../../../interfaces/settings';
-
 @Component({
   selector: 'select-options',
   templateUrl: 'select-options.html'
