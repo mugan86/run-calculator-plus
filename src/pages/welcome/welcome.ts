@@ -26,7 +26,7 @@ export class WelcomePage {
   themeListSelectValues: ITheme[];
   
 
-  selectColor = "violet";
+  selectColor = "twitter";
 
   userPreferences: ISettings;
   defaultLanguage: string;
