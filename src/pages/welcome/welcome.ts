@@ -88,6 +88,8 @@ export class WelcomePage {
     this.themeSelect = this.userPreferences.defaultTheme;
     //Important to add in ngModel select value of theme!!!
     this.language = this.userPreferences.langCode;
+
+    this.updateSelectColor( this.themeSelect.id );
     console.info(this.language);
     
     console.info("Preferences: "  + JSON.stringify(this.userPreferences));
@@ -135,6 +137,12 @@ export class WelcomePage {
     console.info(JSON.stringify(this.userPreferences));
     //Convert object to string and save in local storage
     localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(this.userPreferences));
+    this.updateSelectColor( this.themeSelect.id );
+}
+
+  updateSelectColor(color)
+  {
+     this.selectColor = color;
   }
 
 }
