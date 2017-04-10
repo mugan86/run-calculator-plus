@@ -50,13 +50,6 @@ export class WelcomePage {
 
     //Languages options
     this.languages = languagesSelections;
-    //Manage language
-    this.defaultLanguage = navigator.language.split('-')[0];
-
-    if (this.defaultLanguage != null)
-    {
-      this.defaultLanguage = 'es';
-    }
 
     this.themeListSelectValues = themesListSelection;
     this.themeSelect = this.themeListSelectValues[3];
@@ -77,7 +70,6 @@ export class WelcomePage {
 
       this.settings.updatePreferences(this.userPreferences);
     }
-
     //Important to add in ngModel select value of theme!!!
     this.themeSelect = this.userPreferences.defaultTheme;
     //Important to add in ngModel select value of theme!!!
@@ -132,6 +124,7 @@ export class WelcomePage {
     this.updateSelectColor( this.themeSelect.id );
 }
 
+//TODO Pending to pass all color and update correctly preferences
   updateSelectColor(color)
   {
      this.selectColor = color;
