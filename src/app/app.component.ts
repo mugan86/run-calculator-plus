@@ -34,17 +34,6 @@ export class MyApp {
 
     this.selectColor = settings.getTheme().id;
 
-    /*************************************************************************
-    Check if language select, if not select nothing, set 'en'
-    *************************************************************************/
-
-    /*console.info("Select language: " + localStorage.getItem('selectLanguage'));
-    if (localStorage.getItem('selectLanguage') == null || localStorage.getItem('selectLanguage') == "null")
-    {
-      localStorage.setItem('selectLanguage', 'en');
-      console.info("Change language to " + localStorage.getItem('selectLanguage'));
-    }*/
-
     //Start app
     this.initializeApp();
 
