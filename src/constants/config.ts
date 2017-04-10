@@ -20,4 +20,8 @@ export const themesListSelection = [
   {id: "violet", code: "#ee82ee", name: "Violet"}
 ];
 
+export const convertionsList = [
+  {}
+];
+
   
