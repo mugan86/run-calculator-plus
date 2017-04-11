@@ -38,19 +38,6 @@ export class WelcomePage {
     //Disable Side menu
     this.menuCtrl.enable(false);
 
-   
-    
-    this.defaultLanguage = navigator.language.split('-')[0];
-    if (this.defaultLanguage != null)
-    {
-      localStorage.setItem('selectLanguage', this.defaultLanguage);
-    }
-    if ( localStorage.getItem('selectLanguage') == null || localStorage.getItem('selectLanguage') == "")
-    {
-      this.defaultLanguage = 'es';
-    }
-
-    console.log(this.defaultLanguage);
     this.initializeValues();
 
     translate.setDefaultLang(this.defaultLanguage);
@@ -83,16 +70,13 @@ export class WelcomePage {
 
       this.settings.updatePreferences(this.userPreferences);
     }
-
     //Important to add in ngModel select value of theme!!!
     this.themeSelect = this.userPreferences.defaultTheme;
     //Important to add in ngModel select value of theme!!!
     this.language = this.userPreferences.langCode;
 
     this.updateSelectColor( this.themeSelect.id );
-    console.info(this.language);
-    
-    console.info("Preferences: "  + JSON.stringify(this.userPreferences));
+   
   }
 
 
@@ -140,6 +124,7 @@ export class WelcomePage {
     this.updateSelectColor( this.themeSelect.id );
 }
 
+//TODO Pending to pass all color and update correctly preferences
   updateSelectColor(color)
   {
      this.selectColor = color;

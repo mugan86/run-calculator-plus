@@ -29,8 +29,9 @@ export class MenuPrincipal {
       //Finish to view welcome page and reload only this time
       window.location.reload();
     }
-    translate.setDefaultLang(localStorage.getItem('selectLanguage'));
-   
+    translate.setDefaultLang(settings.getSelectLanguage());
+
+    this.selectColor = settings.getTheme().id;
   }
 
 }

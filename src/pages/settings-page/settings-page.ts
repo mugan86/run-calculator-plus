@@ -3,7 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
 
 //Models / Interfaces
-import { RunConverter } from './../../models/run-converter';
 import { ILanguage } from './../../interfaces/language';
 import { IUnitOfLength } from './../../interfaces/unit-of-length';
 import { ITheme } from './../../interfaces/theme';
@@ -11,14 +10,14 @@ import { ITheme } from './../../interfaces/theme';
 //Constants
 import { languagesSelections, themesListSelection } from './../../constants/config';
 
+import { SettingsService } from "./../../services/settings";
+
 @Component({
   selector: 'page-settings-page',
   templateUrl: 'settings-page.html'
 })
 export class SettingsPage {
 
-  //Page use values
-  converter: RunConverter;
 
   languages: ILanguage[];
   language: string;
@@ -33,19 +32,20 @@ export class SettingsPage {
 
   selectColor : string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
-    translate.setDefaultLang(localStorage.getItem('selectLanguage'));
-    this.converter= new RunConverter();
-    console.log("17.9 km/h = " + this.converter.KilometersPerHourToPaceMinKm(17.9)  + " min/km");
-
+  constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService, private settings: SettingsService) {
     this.initializeValues();
+    translate.setDefaultLang(this.language);
   }
 
   initializeValues() {
-    this.language = localStorage.getItem('selectLanguage');
+    //Load user preferences
+    this.settings.ourPreferences = this.settings.getUserPreferences();
+    this.language = this.settings.getSelectLanguage();
+
+    //Load select list options
     this.languages = languagesSelections;
 
-    this.unitLength = localStorage.getItem('unitOfLengthSelect');
+    this.unitLength = this.settings.getSelectUnitLength();
 
      //Unit of length options
      if (this.unitLength == 'km') this.unitLenghts = [true, false];
@@ -54,7 +54,8 @@ export class SettingsPage {
      //initialize app available all themesListSelection
      this.themeListSelectValues = themesListSelection;
 
-     this.selectColor = "violet";
+     this.selectColor = this.settings.getTheme().id;
+     console.warn(this.selectColor, this.settings.getTheme());
 
   }
 
@@ -64,7 +65,6 @@ export class SettingsPage {
     {
       console.info("Change from " + localStorage.getItem('selectLanguage') + " to " + this.language);
       this.translate.setDefaultLang(this.language);
-      localStorage.setItem('selectLanguage', this.language);
       this.initializeValues();
     }
 
