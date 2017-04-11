@@ -74,9 +74,14 @@ export class SettingsService {
         return this.ourPreferences.welcomeComplete;
     }
 
+    setLanguage()
+    {
+        
+    }
+
     updatePreferences(preferences)
     {
         console.warn("Update preferences: " , preferences);
-        localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(preferences));
+        //localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(preferences));
     }
 }
