@@ -50,6 +50,7 @@ export class WelcomePage {
 
     //Languages options
     this.languages = languagesSelections;
+    this.language = this.languages[3].code;
 
     this.themeListSelectValues = themesListSelection;
     this.themeSelect = this.themeListSelectValues[3];
@@ -62,7 +63,7 @@ export class WelcomePage {
     else {
       //Asign user default preferences settings to start
       this.userPreferences = {
-                            "langCode": this.defaultLanguage, 
+                            "langCode": this.language, 
                             "defaultTheme": this.themeSelect,
                             "welcomeComplete" : false,
                             "unitOfLength": "km"
