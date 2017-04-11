@@ -32,14 +32,22 @@ export class SettingsPage {
 
   selectColor : string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService, private settings: SettingsService) {
+  userPreferences: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+  public translate: TranslateService, private settings: SettingsService) {
     this.initializeValues();
     translate.setDefaultLang(this.language);
   }
 
+  //TODO optimize correctly preferences values
   initializeValues() {
     //Load user preferences
     this.settings.ourPreferences = this.settings.getUserPreferences();
+
+    this.userPreferences = this.settings.getUserPreferences();
+    //console.info(this.userPreferences.getTheme);
+    //console.info(this.userPreferences.getSelectLanguage());
     this.language = this.settings.getSelectLanguage();
 
     //Load select list options
@@ -59,12 +67,14 @@ export class SettingsPage {
 
   }
 
+  //Manage
   updateSelectLanguage()
   {
-    if (this.language != localStorage.getItem('selectLanguage'))
+    if (this.language != this.settings.getSelectLanguage())
     {
-      console.info("Change from " + localStorage.getItem('selectLanguage') + " to " + this.language);
-      this.translate.setDefaultLang(this.language);
+      this.settings.ourPreferences.langCode = this.language;
+      //this.settings.
+      //this.translate.setDefaultLang(this.language);
       this.initializeValues();
     }
 
