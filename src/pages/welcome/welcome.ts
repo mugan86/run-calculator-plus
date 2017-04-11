@@ -117,8 +117,16 @@ export class WelcomePage {
 
   updateSelectTheme(theme)
   {
-    console.log("Theme: ", theme , localStorageValues[4]);
-    console.info(JSON.stringify(this.userPreferences));
+    let foundTheme = false;
+    //Find select color theme with color ID
+    for (let i = 0; i < themesListSelection.length && !foundTheme; i++)
+    {
+      if (theme.id == themesListSelection[i].id) {
+        this.userPreferences.defaultTheme = themesListSelection[i];
+        foundTheme = true;
+      }
+    }
+    
     //Convert object to string and save in local storage
     localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(this.userPreferences));
     this.updateSelectColor( this.themeSelect.id );
