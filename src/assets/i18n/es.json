@@ -111,20 +111,20 @@
 					"TITLE": "Bienvenido al Run Calculator Plus!"
 		},
 		"SLIDE2":{
-					"DESCRIPTION": "",
+					"DESCRIPTION": "Idioma que se usará en la aplicación.",
 					"TITLE": "Velocidad (km/h)"
 		},
 		"SLIDE3":{
-					"DESCRIPTION": "",
+					"DESCRIPTION": "Seleccionar nuestra unidad de longitud.",
 					"TITLE": "Velocidad (km/h)"
 		},
 		"SLIDE4":{
-					"DESCRIPTION": "",
-					"TITLE": "Velocidad (km/h)"
+					"DESCRIPTION": "Seleccionar el color de la apariencia que queremos que tenga la aplicación.",
+					"TITLE": ""
 		},
 		"SLIDE_FINAL":{
-					"DESCRIPTION": "",
-					"TITLE": "Velocidad (km/h)"
+					"DESCRIPTION": "Si has completado todos los pasos, ya tendrás la aplicación adaptada a tus gustos. Si se da la casualidad que quieres cambiar alguna configuración, lo puedes realizar desde \"Configuración\" accediendo del menú lateral izquierdo.",
+					"TITLE": "¿Todo correcto?"
 		},
 		"TITLE": "Bienvenido!!",
 		"I_COMPLETE_ALL": "Finalizar configuración"
