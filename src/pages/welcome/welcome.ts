@@ -39,8 +39,8 @@ export class WelcomePage {
     this.menuCtrl.enable(false);
 
     this.initializeValues();
-
-    translate.setDefaultLang(this.defaultLanguage);
+    this.translate.setDefaultLang(this.language);
+    
   }
 
   private initializeValues()
@@ -76,6 +76,8 @@ export class WelcomePage {
     this.language = this.userPreferences.langCode;
 
     this.updateSelectColor( this.themeSelect.id );
+    console.log(this.language);
+    
    
   }
 
