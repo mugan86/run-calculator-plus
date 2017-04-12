@@ -6,8 +6,6 @@ import { themesListSelection } from './../constants/config';
 
 export class SettingsService {
 
-    ourPreferences: ISettings;
-
     //Languages
     languages: ILanguage[];
     language: string;
@@ -21,12 +19,12 @@ export class SettingsService {
     defaultLanguage: string;
     constructor() { 
         if (JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))) {
-            this.ourPreferences = JSON.parse(localStorage.getItem(localStorageValues['userPreferences']));
+            this.userPreferences = JSON.parse(localStorage.getItem(localStorageValues['userPreferences']));
         }
         else{
             this.defaultLanguage = "es";
             this.themeSelect = themesListSelection[3];
-            this.ourPreferences = {
+            this.userPreferences = {
                             "langCode": this.defaultLanguage, 
                             "defaultTheme": this.themeSelect,
                             "welcomeComplete" : false,
@@ -52,26 +50,26 @@ export class SettingsService {
 
     getTheme()
     {
-        if (this.ourPreferences.defaultTheme == null || this.ourPreferences.defaultTheme === undefined) return themesListSelection[3];
-        return this.ourPreferences.defaultTheme;
+        if (this.userPreferences.defaultTheme == null || this.userPreferences.defaultTheme === undefined) return themesListSelection[3];
+        return this.userPreferences.defaultTheme;
     }
 
     getSelectLanguage()
     {
-        if (this.ourPreferences.langCode === null || this.ourPreferences.langCode === undefined || this.ourPreferences.langCode === "") return "es";
-        return this.ourPreferences.langCode;
+        if (this.userPreferences.langCode === null || this.userPreferences.langCode === undefined || this.userPreferences.langCode === "") return "es";
+        return this.userPreferences.langCode;
     }
 
     getSelectUnitLength()
     {
-        if (this.ourPreferences.unitOfLength === null || this.ourPreferences.unitOfLength === undefined || this.ourPreferences.unitOfLength === "") return "km";
-        return this.ourPreferences.unitOfLength;
+        if (this.userPreferences.unitOfLength === null || this.userPreferences.unitOfLength === undefined || this.userPreferences.unitOfLength === "") return "km";
+        return this.userPreferences.unitOfLength;
     }
 
     isWelcomeComplete()
     {
-        if (this.ourPreferences.welcomeComplete === null) return false;
-        return this.ourPreferences.welcomeComplete;
+        if (this.userPreferences.welcomeComplete === null) return false;
+        return this.userPreferences.welcomeComplete;
     }
 
     setLanguage()
