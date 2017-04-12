@@ -77,8 +77,9 @@ export class WelcomePage {
     console.log(this.userPreferences);
 
     //Unit of length options (get correct value from preferences)
-    if (this.userPreferences.unitOfLength === 'km') this.unitLenghts = [true, false];
-    else this.unitLenghts = [false, true];
+    //if (this.userPreferences.unitOfLength === 'km') this.unitLenghts = [true, false];
+    //else this.unitLenghts = [false, true];
+    this.unitLenghts = this.settings.getUnitLengthValuesToManageInLayout();
     
    
   }
