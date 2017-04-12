@@ -43,7 +43,7 @@ export class SettingsPage {
   //TODO optimize correctly preferences values
   initializeValues() {
     //Load user preferences
-    this.settings.ourPreferences = this.settings.getUserPreferences();
+    this.settings.userPreferences = this.settings.getUserPreferences();
 
     this.userPreferences = this.settings.getUserPreferences();
     //console.info(this.userPreferences.getTheme);
@@ -72,7 +72,7 @@ export class SettingsPage {
   {
     if (this.language != this.settings.getSelectLanguage())
     {
-      this.settings.ourPreferences.langCode = this.language;
+      this.settings.userPreferences.langCode = this.language;
       //this.settings.
       //this.translate.setDefaultLang(this.language);
       this.initializeValues();
