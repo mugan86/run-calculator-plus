@@ -75,7 +75,7 @@ export class SettingsService {
 
     isWelcomeComplete()
     {
-        if (this.userPreferences.welcomeComplete === null) return false;
+        if (this.userPreferences.welcomeComplete === null || this.userPreferences.welcomeComplete === undefined) return false;
         return this.userPreferences.welcomeComplete;
     }
 
