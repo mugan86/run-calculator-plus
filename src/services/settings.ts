@@ -77,9 +77,25 @@ export class SettingsService {
         
     }
 
+    updateUnitLength(option, unitLenghts)
+    {
+        if (option == 0) unitLenghts[1] = !unitLenghts[0];
+        else unitLenghts[0] = !unitLenghts[1];
+
+        console.log("UNIT LENGTH: " ,  unitLenghts);
+
+        
+
+        if (unitLenghts[0]) this.userPreferences.unitOfLength = 'km';
+        else this.userPreferences.unitOfLength = 'mile';
+
+        console.log("UNIT LENGTH CHANGE AFTER: " ,  this.userPreferences);
+        console.info(JSON.stringify(this.userPreferences));
+    }
+
     updatePreferences(preferences)
     {
         console.warn("Update preferences: " , preferences);
-        //localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(preferences));
+        localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(preferences));
     }
 }
