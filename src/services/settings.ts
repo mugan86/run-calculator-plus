@@ -91,6 +91,7 @@ export class SettingsService {
 
         console.log("UNIT LENGTH CHANGE AFTER: " ,  this.userPreferences);
         console.info(JSON.stringify(this.userPreferences));
+        this.updatePreferences(this.userPreferences);
     }
 
     updatePreferences(preferences)
