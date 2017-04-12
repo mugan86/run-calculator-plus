@@ -43,7 +43,7 @@ export class SettingsPage {
   //TODO optimize correctly preferences values
   initializeValues() {
     //Load user preferences
-    this.settings.userPreferences = this.settings.getUserPreferences();
+    //this.settings.userPreferences = this.settings.getUserPreferences();
 
     this.userPreferences = this.settings.getUserPreferences();
 
@@ -59,8 +59,11 @@ export class SettingsPage {
 
      //initialize app available all themesListSelection
      this.themeListSelectValues = themesListSelection;
+     
+     //Important to add in ngModel select value of theme!!!
+      this.themeSelect = this.userPreferences.defaultTheme;
 
-     this.selectColor = this.settings.getTheme().id;
+     this.selectColor = this.themeSelect.id;
 
   }
 
@@ -78,6 +81,11 @@ export class SettingsPage {
   manageUnitLengthsSelections(option)
   {
     this.settings.updateUnitLength(option, this.unitLenghts);
+  }
+
+  updateSelectTheme(theme)
+  {
+    this.selectColor = this.settings.updateTheme(theme);
   }
 
 }
