@@ -56,8 +56,8 @@ export class SettingsPage {
     this.unitLength = this.settings.getSelectUnitLength();
 
      //Unit of length options
-     if (this.unitLength == 'km') this.unitLenghts = [true, false];
-     else this.unitLenghts = [false, true];
+     //Unit of length options (get correct value from preferences)
+    this.unitLenghts = this.settings.getUnitLengthValuesToManageInLayout();
 
      //initialize app available all themesListSelection
      this.themeListSelectValues = themesListSelection;
@@ -82,11 +82,7 @@ export class SettingsPage {
 
   manageUnitLengthsSelections(option)
   {
-    if (option == 0) this.unitLenghts[1] = !this.unitLenghts[0];
-    else this.unitLenghts[0] = !this.unitLenghts[1];
-
-    if (this.unitLenghts[0]) localStorage.setItem('unitOfLengthSelect', 'km');
-    else localStorage.setItem('unitOfLengthSelect', 'mile');
+    this.settings.updateUnitLength(option, this.unitLenghts);
   }
 
 }
