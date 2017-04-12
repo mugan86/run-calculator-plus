@@ -12,6 +12,10 @@ import { languagesSelections, themesListSelection } from './../../constants/conf
 
 import { SettingsService } from "./../../services/settings";
 
+/**
+ * Create event emitter to use in app.html to update sidemenu
+ */
+
 @Component({
   selector: 'page-settings-page',
   templateUrl: 'settings-page.html'
