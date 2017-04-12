@@ -17,15 +17,15 @@ export class MenuPrincipal {
     this.menuCtrl.enable(true);
 
     //Load user preferences
-    settings.ourPreferences = settings.getUserPreferences();
+    settings.userPreferences = settings.getUserPreferences();
 
     //console.log("Welcome COmplete? " +  settings.isWelcomeComplete());
     
     if (!settings.isWelcomeComplete())
     {
       console.log("Update preferences!!");
-      settings.ourPreferences.welcomeComplete = true;
-      settings.updatePreferences(settings.ourPreferences);
+      settings.userPreferences.welcomeComplete = true;
+      settings.updatePreferences(settings.userPreferences);
       //Finish to view welcome page and reload only this time
       window.location.reload();
     }
