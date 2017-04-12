@@ -106,6 +106,7 @@ export class WelcomePage {
       this.translate.setDefaultLang(this.language);
       this.initializeValues();
     }
+
   }
 
   updateSelectTheme(theme)
