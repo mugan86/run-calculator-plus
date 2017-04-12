@@ -46,8 +46,7 @@ export class SettingsPage {
     this.settings.userPreferences = this.settings.getUserPreferences();
 
     this.userPreferences = this.settings.getUserPreferences();
-    //console.info(this.userPreferences.getTheme);
-    //console.info(this.userPreferences.getSelectLanguage());
+
     this.language = this.settings.getSelectLanguage();
 
     //Load select list options
@@ -55,7 +54,6 @@ export class SettingsPage {
 
     this.unitLength = this.settings.getSelectUnitLength();
 
-     //Unit of length options
      //Unit of length options (get correct value from preferences)
     this.unitLenghts = this.settings.getUnitLengthValuesToManageInLayout();
 
@@ -63,7 +61,6 @@ export class SettingsPage {
      this.themeListSelectValues = themesListSelection;
 
      this.selectColor = this.settings.getTheme().id;
-     console.warn(this.selectColor, this.settings.getTheme());
 
   }
 
@@ -73,8 +70,6 @@ export class SettingsPage {
     if (this.language != this.settings.getSelectLanguage())
     {
       this.settings.userPreferences.langCode = this.language;
-      //this.settings.
-      //this.translate.setDefaultLang(this.language);
       this.initializeValues();
     }
 
