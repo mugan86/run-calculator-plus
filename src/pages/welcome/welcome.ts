@@ -45,9 +45,7 @@ export class WelcomePage {
 
   private initializeValues()
   {
-    //Unit of length options
-    this.unitLenghts = [true, false];
-
+    
     //Languages options
     this.languages = languagesSelections;
     this.language = this.languages[3].code;
@@ -68,7 +66,6 @@ export class WelcomePage {
                             "welcomeComplete" : false,
                             "unitOfLength": "km"
                           };
-
       this.settings.updatePreferences(this.userPreferences);
     }
     //Important to add in ngModel select value of theme!!!
@@ -77,7 +74,11 @@ export class WelcomePage {
     this.language = this.userPreferences.langCode;
 
     this.updateSelectColor( this.themeSelect.id );
-    console.log(this.language);
+    console.log(this.userPreferences);
+
+    //Unit of length options (get correct value from preferences)
+    if (this.userPreferences.unitOfLength === 'km') this.unitLenghts = [true, false];
+    else this.unitLenghts = [false, true];
     
    
   }
