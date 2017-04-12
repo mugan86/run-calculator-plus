@@ -72,7 +72,7 @@ export class WelcomePage {
     //Important to add in ngModel select value of theme!!!
     this.language = this.userPreferences.langCode;
 
-    this.updateSelectColor( this.themeSelect.id );
+    this.selectColor = this.themeSelect.id;
     console.log(this.userPreferences);
 
     //Unit of length options (get correct value from preferences)
@@ -105,22 +105,11 @@ export class WelcomePage {
       this.translate.setDefaultLang(this.language);
       this.initializeValues();
     }
-
   }
 
   updateSelectTheme(theme)
   {
-   
-    this.settings.updateTheme(theme);
-    //Convert object to string and save in local storage
-    //localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(this.userPreferences));
-    this.updateSelectColor( this.themeSelect.id );
-}
-
-//TODO Pending to pass all color and update correctly preferences
-  updateSelectColor(color)
-  {
-     this.selectColor = color;
+    this.selectColor = this.settings.updateTheme(theme);
   }
 
 }
