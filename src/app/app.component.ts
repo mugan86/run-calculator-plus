@@ -28,7 +28,7 @@ export class MyApp {
 
   constructor(public platform: Platform, private settings: SettingsService) {
 
-    settings.ourPreferences = settings.ourPreferences = settings.getUserPreferences();
+    settings.userPreferences = settings.getUserPreferences();
     if (settings.isWelcomeComplete()) this.rootPage = MenuPrincipal;
     else this.rootPage = WelcomePage;
 
