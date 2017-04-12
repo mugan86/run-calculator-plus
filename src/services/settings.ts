@@ -66,6 +66,13 @@ export class SettingsService {
         return this.userPreferences.unitOfLength;
     }
 
+    getUnitLengthValuesToManageInLayout()
+    {
+        //Unit of length options (get correct value from preferences)
+        if (this.userPreferences.unitOfLength === 'km') return [true, false];
+        return [false, true];
+    }
+
     isWelcomeComplete()
     {
         if (this.userPreferences.welcomeComplete === null) return false;
