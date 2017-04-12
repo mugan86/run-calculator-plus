@@ -91,6 +91,9 @@ export class SettingsService {
             }
         }
         this.updatePreferences(this.userPreferences);
+
+        //Return to new select theme color id to change in layout
+        return this.userPreferences.defaultTheme.id;
     }
 
     updateUnitLength(option, unitLenghts)
