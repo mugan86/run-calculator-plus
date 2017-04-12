@@ -6,7 +6,6 @@ import { ILanguage } from './../../interfaces/language';
 import { ITheme } from './../../interfaces/theme';
 import { ISettings } from './../../interfaces/settings';
 import { languagesSelections, themesListSelection} from './../../constants/config';
-import { localStorageValues } from './../../constants/local-storage';
 import { SettingsService } from "./../../services/settings";
 
 
