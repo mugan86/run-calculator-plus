@@ -79,9 +79,18 @@ export class SettingsService {
         return this.userPreferences.welcomeComplete;
     }
 
-    setLanguage()
+    updateTheme(theme)
     {
-        
+        let foundTheme = false;
+        //Find select color theme with color ID
+        for (let i = 0; i < themesListSelection.length && !foundTheme; i++)
+        {
+            if (theme.id == themesListSelection[i].id) {
+                this.userPreferences.defaultTheme = themesListSelection[i];
+                foundTheme = true;
+            }
+        }
+        this.updatePreferences(this.userPreferences);
     }
 
     updateUnitLength(option, unitLenghts)
