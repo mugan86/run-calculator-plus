@@ -99,17 +99,7 @@ export class WelcomePage {
 
   manageUnitLengthsSelections(option)
   {
-    if (option == 0) this.unitLenghts[1] = !this.unitLenghts[0];
-    else this.unitLenghts[0] = !this.unitLenghts[1];
-
-    console.log("UNIT LENGTH: " ,  this.unitLenghts);
-
-    
-
-    if (this.unitLenghts[0]) this.userPreferences.unitOfLength = 'km';
-    else this.userPreferences.unitOfLength = 'mile';
-
-    console.log("UNIT LENGTH CHANGE AFTER: " ,  this.userPreferences);
+    this.settings.updateUnitLength(option, this.unitLenghts);
   }
 
   updateSelectLanguage()
