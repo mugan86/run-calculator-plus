@@ -25,7 +25,6 @@ export class WelcomePage {
   themeSelect: ITheme;
   themeListSelectValues: ITheme[];
   
-
   selectColor = "twitter";
 
   userPreferences: ISettings;
@@ -111,18 +110,10 @@ export class WelcomePage {
 
   updateSelectTheme(theme)
   {
-    let foundTheme = false;
-    //Find select color theme with color ID
-    for (let i = 0; i < themesListSelection.length && !foundTheme; i++)
-    {
-      if (theme.id == themesListSelection[i].id) {
-        this.userPreferences.defaultTheme = themesListSelection[i];
-        foundTheme = true;
-      }
-    }
-    
+   
+    this.settings.updateTheme(theme);
     //Convert object to string and save in local storage
-    localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(this.userPreferences));
+    //localStorage.setItem(localStorageValues['userPreferences'], JSON.stringify(this.userPreferences));
     this.updateSelectColor( this.themeSelect.id );
 }
 
