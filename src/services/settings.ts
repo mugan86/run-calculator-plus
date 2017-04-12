@@ -18,19 +18,7 @@ export class SettingsService {
     userPreferences: ISettings;
     defaultLanguage: string;
     constructor() { 
-        if (JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))) {
-            this.userPreferences = JSON.parse(localStorage.getItem(localStorageValues['userPreferences']));
-        }
-        else{
-            this.defaultLanguage = "es";
-            this.themeSelect = themesListSelection[3];
-            this.userPreferences = {
-                            "langCode": this.defaultLanguage, 
-                            "defaultTheme": this.themeSelect,
-                            "welcomeComplete" : false,
-                            "unitOfLength": "km"
-                          };
-        }
+        this.userPreferences = this.getUserPreferences();
     }
 
     /******************************************************************************************
@@ -41,11 +29,17 @@ export class SettingsService {
         if (JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))) {
             return JSON.parse(localStorage.getItem(localStorageValues['userPreferences']));
         }
-        return  {   "langCode": this.defaultLanguage, 
-                    "defaultTheme": this.themeSelect,
-                    "welcomeComplete" : false,
-                    "unitOfLength": "km"
-                };
+        this.defaultLanguage = "es";
+        this.themeSelect = themesListSelection[3];
+        //Asign user default preferences settings to start
+        this.userPreferences = {
+                                "langCode": this.defaultLanguage, 
+                                "defaultTheme": this.themeSelect,
+                                "welcomeComplete" : false,
+                                "unitOfLength": "km"
+                            };
+        this.updatePreferences(this.userPreferences);
+        return  this.userPreferences;
     }
 
     getTheme()
