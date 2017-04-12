@@ -102,14 +102,10 @@ export class WelcomePage {
 
   updateSelectLanguage()
   {
-    if (this.language != localStorage.getItem('selectLanguage'))
-    {
-      console.info("Change from " + localStorage.getItem('selectLanguage') + " to " + this.language);
+    if (this.settings.updateSelectLanguage(this.language)) {
       this.translate.setDefaultLang(this.language);
-      localStorage.setItem('selectLanguage', this.language);
       this.initializeValues();
     }
-
   }
 
   updateSelectTheme(theme)

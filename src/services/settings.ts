@@ -94,6 +94,19 @@ export class SettingsService {
         this.updatePreferences(this.userPreferences);
     }
 
+    //Manage to select language updates. Return true if language change
+    updateSelectLanguage(language)
+    {
+        if (language != this.userPreferences.langCode)
+        {
+            console.info("Change from " + this.userPreferences.langCode + " to " + language);
+            this.userPreferences.langCode = language;
+            this.updatePreferences(this.userPreferences);
+            return true;
+        }
+        return false;
+    }
+
     updatePreferences(preferences)
     {
         console.warn("Update preferences: " , preferences);
