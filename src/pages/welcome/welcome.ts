@@ -51,22 +51,10 @@ export class WelcomePage {
 
     this.themeListSelectValues = themesListSelection;
     this.themeSelect = this.themeListSelectValues[3];
-
-    //Check if exist preferences values storage in local storage
-    if (JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))) {
-      console.log("contain storage");
-      this.userPreferences = this.settings.getUserPreferences();
-    }
-    else {
-      //Asign user default preferences settings to start
-      this.userPreferences = {
-                            "langCode": this.language, 
-                            "defaultTheme": this.themeSelect,
-                            "welcomeComplete" : false,
-                            "unitOfLength": "km"
-                          };
-      this.settings.updatePreferences(this.userPreferences);
-    }
+    
+    //Load user preferences
+    this.userPreferences = this.settings.getUserPreferences();
+    
     //Important to add in ngModel select value of theme!!!
     this.themeSelect = this.userPreferences.defaultTheme;
     //Important to add in ngModel select value of theme!!!
