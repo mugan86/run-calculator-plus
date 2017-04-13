@@ -40,7 +40,11 @@ export class SettingsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, 
   public translate: TranslateService, private settings: SettingsService, private events: Events) {
     this.initializeValues();
-    translate.setDefaultLang(this.language);
+    this.selectLanguage();
+  }
+
+  selectLanguage() {
+    this.translate.setDefaultLang(this.language);
   }
 
   //TODO optimize correctly preferences values
@@ -60,22 +64,21 @@ export class SettingsPage {
      //Unit of length options (get correct value from preferences)
     this.unitLenghts = this.settings.getUnitLengthValuesToManageInLayout();
 
-     //initialize app available all themesListSelection
-     this.themeListSelectValues = themesListSelection;
+    //initialize app available all themesListSelection
+    this.themeListSelectValues = themesListSelection;
      
-     //Important to add in ngModel select value of theme!!!
-      this.themeSelect = this.userPreferences.defaultTheme;
+    //Important to add in ngModel select value of theme!!!
+    this.themeSelect = this.userPreferences.defaultTheme;
 
-     this.selectColor = this.themeSelect.id;
+    this.selectColor = this.themeSelect.id;
 
   }
 
   //Manage
   updateSelectLanguage()
   {
-    if (this.language != this.settings.getSelectLanguage())
-    {
-      this.settings.userPreferences.langCode = this.language;
+    if (this.settings.updateSelectLanguage(this.language)) {
+      this.selectLanguage();
       this.initializeValues();
     }
 
