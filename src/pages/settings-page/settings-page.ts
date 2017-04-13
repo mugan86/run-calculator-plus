@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter} from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Events } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
 
 //Models / Interfaces
@@ -22,9 +22,6 @@ import { SettingsService } from "./../../services/settings";
 })
 export class SettingsPage {
 
-  @Output() changeColor: EventEmitter<string> = new EventEmitter<string>();
-
-
   languages: ILanguage[];
   language: string;
 
@@ -41,7 +38,7 @@ export class SettingsPage {
   userPreferences: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-  public translate: TranslateService, private settings: SettingsService) {
+  public translate: TranslateService, private settings: SettingsService, private events: Events) {
     this.initializeValues();
     translate.setDefaultLang(this.language);
   }
@@ -92,7 +89,9 @@ export class SettingsPage {
   updateSelectTheme(theme)
   {
     this.selectColor = this.settings.updateTheme(theme);
-    this.changeColor.emit(this.selectColor);
+    console.warn("Change color!");
+    //this.changeColor.emit(this.selectColor);
+    this.events.publish('theme:change', this.selectColor);
   }
 
 }
