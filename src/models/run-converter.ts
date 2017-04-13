@@ -75,7 +75,7 @@ export class RunConverter
 
     /**
      * @param speed_km_h Add value in kilometers / hour. For Example: 14.5
-     * @return String, result example '4.0316 m/sec = 14.514 km/h'
+     * @return String, result example '14.514 km/h = 4.0316 m/sec '
      */
     KilometersPerHourToMetersSecond(speed_km_h: number) {
         let result_with_m_min = this.KilometersPerHourToMetersMinute(speed_km_h);
