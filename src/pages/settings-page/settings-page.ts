@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
 
@@ -21,6 +21,8 @@ import { SettingsService } from "./../../services/settings";
   templateUrl: 'settings-page.html'
 })
 export class SettingsPage {
+
+  @Output() changeColor: EventEmitter<string> = new EventEmitter<string>();
 
 
   languages: ILanguage[];
@@ -90,6 +92,7 @@ export class SettingsPage {
   updateSelectTheme(theme)
   {
     this.selectColor = this.settings.updateTheme(theme);
+    this.changeColor.emit(this.selectColor);
   }
 
 }
