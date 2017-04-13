@@ -42,16 +42,15 @@
 
     </ion-list>
     <h2 >{{'THEME.SELECT' | translate}}</h2>
-       <p >{{'WELCOME.SLIDE4.DESCRIPTION' | translate}}</p>
-       
-       <ion-list>
-          <ion-item>
-            <ion-label>{{'THEME.CLICK_TO_SELECT_THEME' | translate}}</ion-label>
-            <ion-select [(ngModel)]="themeSelect.id" (ngModelChange)="updateSelectTheme(userPreferences.defaultTheme)">
-              <ion-option *ngFor="let theme of themeListSelectValues" [value]="theme.id">{{theme.name}}</ion-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-        <ion-item class="center-text" color="{{selectColor}}"> {{'THEME.COLOR_PREVIEW_TEXT' | translate}}</ion-item>
+    <p >{{'WELCOME.SLIDE4.DESCRIPTION' | translate}}</p>
+    
+    <ion-list>
+      <ion-item>
+        <ion-label>{{'THEME.CLICK_TO_SELECT_THEME' | translate}}</ion-label>
+        <ion-select [(ngModel)]="themeSelect.id" (ngModelChange)="updateSelectTheme(userPreferences.defaultTheme)">
+          <ion-option *ngFor="let theme of themeListSelectValues" [value]="theme.id">{{theme.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
 
 </ion-content>
