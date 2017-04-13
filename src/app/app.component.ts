@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, Events } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { Page1 } from './../pages/page1/page1';
@@ -26,7 +26,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(public platform: Platform, private settings: SettingsService) {
+  constructor(public platform: Platform, private settings: SettingsService, public events: Events) {
 
     settings.userPreferences = settings.getUserPreferences();
     if (settings.isWelcomeComplete()) this.rootPage = MenuPrincipal;
@@ -47,6 +47,13 @@ export class MyApp {
 
     ];
 
+    //To managa theme change situation from settings page
+    events.subscribe('theme:change', (color) => {
+      // user and time are the same arguments passed in `events.publish(user, time)`
+      console.log(this.selectColor + " color change to " + color);
+      this.selectColor = color;
+    });
+
   }
 
   initializeApp() {
@@ -62,9 +69,5 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
-  }
-
-  changeSelectColor() {
-
   }
 }
