@@ -89,8 +89,6 @@ export class SettingsPage {
   updateSelectTheme(theme)
   {
     this.selectColor = this.settings.updateTheme(theme);
-    console.warn("Change color!");
-    //this.changeColor.emit(this.selectColor);
     this.events.publish('theme:change', this.selectColor);
   }
 
