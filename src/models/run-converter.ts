@@ -148,9 +148,9 @@ export class RunConverter
     }
 
     /**
-     * @param time        HH:MM:SS formatAdd value in kilometers / hour. For Example: 01:00:00
+     * @param time        HH:MM:SS formatAdd value For Example: 01:00:00
      * @param total_steps int value. For Example: 12304.
-     * @return String with pace min/km, result example '15km / 04:00min/km = 01:00:00'
+     * @return String with pace min/km, result example 'x step/min'
      */
     StepsPerMinuteFromTotalStepsAndTime(time: string, total_steps: number) {
         /******
