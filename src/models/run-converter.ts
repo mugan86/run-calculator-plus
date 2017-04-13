@@ -57,7 +57,7 @@ export class RunConverter
 
     /**
      * @param speed_km_h Add value in kilometers / hour. For Example: 14.5
-     * @return String, result example '241.9 m/min = 14.514 km/h'
+     * @return String, result example '14.514 km/h = 241.9 m/min'
      */
     KilometersPerHourToMetersMinute(speed_km_h: number) {
         if (speed_km_h <= 0) return "Stop situation";
