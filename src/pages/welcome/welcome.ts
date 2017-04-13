@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, MenuController } from 'ionic-angular';
+import { NavController, NavParams, MenuController, Events } from 'ionic-angular';
 import { MenuPrincipal } from './../menu-principal/menu-principal';
 import { TranslateService } from 'ng2-translate';
 import { ILanguage } from './../../interfaces/language';
@@ -31,13 +31,15 @@ export class WelcomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
                 public translate: TranslateService, private menuCtrl: MenuController,
-                private settings: SettingsService) {
+                private settings: SettingsService, private events: Events) {
 
     //Disable Side menu
     this.menuCtrl.enable(false);
 
     this.initializeValues();
     this.translate.setDefaultLang(this.language);
+
+    
     
   }
 
@@ -97,6 +99,7 @@ export class WelcomePage {
   updateSelectTheme(theme)
   {
     this.selectColor = this.settings.updateTheme(theme);
+    this.events.publish('theme:change', this.selectColor);
   }
 
 }
