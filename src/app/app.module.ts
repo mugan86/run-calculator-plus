@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 import { TranslateModule, TranslateLoader } from 'ng2-translate/ng2-translate';
@@ -6,6 +6,8 @@ import { createTranslateLoader } from './../services/translate-loader';
 import { Http } from '@angular/http';
 
 import { MyApp } from './app.component';
+
+import { SelectOption } from './../components/select-options/select-options';
 
 //Pages
 import { WelcomePage } from './../pages/welcome/welcome';
@@ -26,6 +28,7 @@ import { SettingsService } from './../services/settings';
 @NgModule({
   declarations: [
     MyApp,
+    SelectOption,
     WelcomePage,
     Page1,
     Page2,
@@ -66,9 +69,11 @@ import { SettingsService } from './../services/settings';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    SelectOption,
     Page1,
     Page2, Page3, MenuPrincipal, Contact, SettingsPage, WelcomePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ConvertedService, SettingsService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ConvertedService, SettingsService],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
