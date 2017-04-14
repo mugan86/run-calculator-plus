@@ -42,7 +42,7 @@ export class SettingsService {
         return  this.userPreferences;
     }
 
-    getTheme()
+    getTheme(): any
     {
         if (this.userPreferences.defaultTheme == null || this.userPreferences.defaultTheme === undefined) return themesListSelection[3];
         return this.userPreferences.defaultTheme;
