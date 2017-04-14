@@ -1,0 +1,10 @@
+<ion-list>
+    <ion-item>
+    <ion-label></ion-label>
+    <ion-select [(ngModel)]="select">
+        <div *ngFor="let value of values">
+        <ion-option [value]="value">{{value}}</ion-option>
+        </div>
+    </ion-select>
+    </ion-item>
+</ion-list>
