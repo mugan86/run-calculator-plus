@@ -17,6 +17,8 @@ export const themesListSelection = [
   {id: "light", code: "#f4f4f4", name: "Light", available: false},
   {id: "lightseagreen", code: "#200b2aa", name: "Servirace", available: true},
   {id: "twitter", code: "#55acee", name: "Twitter", available: true},
+  {id: "bluesapphire", code: "#126180", name: "Blue Sapphire", available: true},
+  {id: "amber", code: "#FF7E00", name: "Amber", available: true},
   {id: "danger", code: "#f53d3d", name: "Danger", available: true},
   {id: "violet", code: "#ee82ee", name: "Violet", available: true}
 ];
