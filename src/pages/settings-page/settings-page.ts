@@ -11,6 +11,7 @@ import { ITheme } from './../../interfaces/theme';
 import { languagesSelections, themesListSelection } from './../../constants/config';
 
 import { SettingsService } from "./../../services/settings";
+ 
 
 /**
  * Create event emitter to use in app.html to update sidemenu
