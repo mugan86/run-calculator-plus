@@ -4,6 +4,8 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { Page3 } from './../page3/page3';
 
+import { SettingsService } from "./../../services/settings";
+
 @Component({
   selector: 'page-page2',
   templateUrl: 'page2.html'
@@ -13,7 +15,7 @@ export class Page2 {
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
   selectColor = "twitter";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private settings: SettingsService) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
@@ -29,6 +31,8 @@ export class Page2 {
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
+
+    this.selectColor = settings.getTheme().id;
   }
 
   itemTapped(event, item) {
