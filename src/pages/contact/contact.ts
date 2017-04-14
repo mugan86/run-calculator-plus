@@ -5,24 +5,22 @@ import { RunConverter } from './../../models/run-converter';
 import { TranslateService } from 'ng2-translate';
 
 import {email, github} from './../../constants/contact-info';
+import { SettingsService } from "./../../services/settings";
+
 
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html'
 })
 export class Contact {
-  converter: RunConverter;
+  
   convertions = [{icon: 'iii', label: 'Kms'}];
   selectColor = "twitter";
-  constructor(public navCtrl: NavController, public translate: TranslateService) {
-    translate.setDefaultLang(localStorage.getItem('selectLanguage'));
-    this.converter= new RunConverter();
-    console.log("17.9 km/h = " + this.converter.KilometersPerHourToPaceMinKm(17.9)  + " min/km");
+  constructor(public navCtrl: NavController, public translate: TranslateService, public settings: SettingsService) {
+    translate.setDefaultLang(settings.getSelectLanguage());
+    
     console.log(this.convertions[0].icon);
-  }
 
-  makeBasicConversion()
-  {
-    console.log("21.1 km/h = " + this.converter.KilometersPerHourToPaceMinKm(21.1)  + " min/km");
+    this.selectColor = settings.getTheme().id;
   }
 }

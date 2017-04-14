@@ -1,3 +1,36 @@
-.custom {
-  background : color($colors, twitter)
+h3.title {
+  color: white;
+}
+
+
+.lightseagreen-custom {
+  background: color($colors, lightseagreen)
+}
+
+.violet-custom {
+  background: color($colors, violet)
+}
+
+.twitter-custom {
+  background: color($colors, twitter)
+}
+
+.coral-custom {
+  background: color($colors, coral)
+}
+
+.light-custom { 
+  background: color($colors, light)
+}
+
+.danger-custom {
+  background: color($colors, danger);
+}
+
+.amber-custom {
+  background: color($colors, amber);
+}
+
+.bluesapphire-custom{
+  background: color($colors, bluesapphire);
 }
