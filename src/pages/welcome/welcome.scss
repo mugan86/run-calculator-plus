@@ -33,6 +33,10 @@
   background: color($colors, danger);
 }
 
+.bluesapphire button.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: color($colors, bluesapphire);
+}
+
 .center-text {
   text-align: center;
 }
