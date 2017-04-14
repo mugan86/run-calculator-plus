@@ -33,7 +33,8 @@ $colors: (
   transparent: transparent,
   coral: #FF7F50,
   lightseagreen: #20B2AA,
-  violet: #EE82EE
+  violet: #EE82EE,
+  amber: #FF7E00
 );
 
 
@@ -132,4 +133,8 @@ Manage themes variations
 
 .danger {
   background: color($colors, danger)
+}
+
+.amber {
+  background: color($colors, amber);
 }
