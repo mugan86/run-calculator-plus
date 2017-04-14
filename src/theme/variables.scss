@@ -34,7 +34,8 @@ $colors: (
   coral: #FF7F50,
   lightseagreen: #20B2AA,
   violet: #EE82EE,
-  amber: #FF7E00
+  amber: #FF7E00,
+  bluesapphire: #126180
 );
 
 
@@ -137,4 +138,8 @@ Manage themes variations
 
 .amber {
   background: color($colors, amber);
+}
+
+.bluesapphire {
+  background: color($colors, bluesapphire);
 }
