@@ -5,6 +5,16 @@
         <div *ngFor="let value of values">
         <ion-option [value]="value">{{value}}</ion-option>
         </div>
+    </ion-select> : 
+    <ion-select [(ngModel)]="select">
+        <div *ngFor="let value of values">
+        <ion-option [value]="value">{{value}}</ion-option>
+        </div>
     </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Username"></ion-input>
+        <ion-input type="text" placeholder="Username"></ion-input>
+        <ion-input type="text" placeholder="Username"></ion-input>
     </ion-item>
 </ion-list>
