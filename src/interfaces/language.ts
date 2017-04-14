@@ -6,4 +6,6 @@ export interface ILanguage{
     code: string;
     //Show language text label. For exmple in basque show "Euskara"
     label: string;
+    //To manage if language publish
+    available?: Boolean
 }
