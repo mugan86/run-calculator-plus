@@ -47,7 +47,9 @@
           <ion-item>
             <ion-label>{{'THEME.CLICK_TO_SELECT_THEME' | translate}}</ion-label>
             <ion-select [(ngModel)]="themeSelect.id" (ngModelChange)="updateSelectTheme(userPreferences.defaultTheme)">
-              <ion-option *ngFor="let theme of themeListSelectValues" [value]="theme.id">{{theme.name}}</ion-option>
+              <div *ngFor="let theme of themeListSelectValues">
+                  <ion-option [value]="theme.id" *ngIf="theme.available">{{theme.name}}</ion-option>
+              </div>
             </ion-select>
           </ion-item>
         </ion-list>
