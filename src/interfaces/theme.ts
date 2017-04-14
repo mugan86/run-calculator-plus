@@ -10,4 +10,5 @@ export interface ITheme{
     name: string;
     //Show theme description
     description?: string;
+    available?: Boolean;
 }
