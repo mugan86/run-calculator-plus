@@ -12,9 +12,13 @@
         </div>
     </ion-select>
     </ion-item>
-    <ion-item>
-        <ion-input type="text" placeholder="Username"></ion-input>
-        <ion-input type="text" placeholder="Username"></ion-input>
-        <ion-input type="text" placeholder="Username"></ion-input>
-    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4></ion-col>
+        <ion-col col-2><ion-input type="number" value="0" min="0" placeholder="min"></ion-input></ion-col>
+        <ion-col col-1>:</ion-col>
+        <ion-col col-2><ion-input type="number" min="0" max="5" placeholder="sg"></ion-input></ion-col>
+        <ion-col col-3></ion-col>
+      </ion-row>
+    </ion-grid>
 </ion-list>
