@@ -29,7 +29,7 @@ export class MyApp {
   constructor(public platform: Platform, private settings: SettingsService, public events: Events) {
 
     settings.userPreferences = settings.getUserPreferences();
-    if (settings.isWelcomeComplete()) this.rootPage = MenuPrincipal;
+    if (settings.isWelcomeComplete()) this.rootPage = SettingsPage; //MenuPrincipal
     else this.rootPage = WelcomePage;
 
     this.selectColor = settings.getTheme().id;
