@@ -47,7 +47,7 @@ export class MyApp {
 
     ];
 
-    //To managa theme change situation from settings page
+    //To manage theme change situation from settings page
     events.subscribe('theme:change', (color) => {
       // user and time are the same arguments passed in `events.publish(user, time)`
       console.log(this.selectColor + " color change to " + color);

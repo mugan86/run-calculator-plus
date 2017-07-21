@@ -24,45 +24,41 @@ export class SettingsService {
     /******************************************************************************************
      * Function to return save user preferences or if not exist, return default preferences
      ******************************************************************************************/
-    getUserPreferences()
-    {
+    getUserPreferences() {
         if (JSON.parse(localStorage.getItem(localStorageValues['userPreferences']))) {
             return JSON.parse(localStorage.getItem(localStorageValues['userPreferences']));
         }
-        this.defaultLanguage = "es";
+        this.defaultLanguage = 'es';
         this.themeSelect = themesListSelection[3];
         //Asign user default preferences settings to start
         this.userPreferences = {
-                                "langCode": this.defaultLanguage, 
-                                "defaultTheme": this.themeSelect,
-                                "welcomeComplete" : false,
-                                "unitOfLength": "km"
+                                'langCode': this.defaultLanguage, 
+                                'defaultTheme': this.themeSelect,
+                                'welcomeComplete' : false,
+                                'unitOfLength': 'km'
                             };
         this.updatePreferences(this.userPreferences);
         return  this.userPreferences;
     }
 
-    getTheme(): any
-    {
-        if (this.userPreferences.defaultTheme == null || this.userPreferences.defaultTheme === undefined) return themesListSelection[3];
+    getTheme(): any {
+        if (this.userPreferences.defaultTheme == null || this.userPreferences.defaultTheme === undefined) { return themesListSelection[3]; }
         return this.userPreferences.defaultTheme;
     }
 
-    getSelectLanguage()
-    {
+    getSelectLanguage() {
         if (this.userPreferences.langCode === null || this.userPreferences.langCode === undefined || this.userPreferences.langCode === "") return "es";
         return this.userPreferences.langCode;
     }
 
-    getSelectUnitLength()
-    {
+    getSelectUnitLength() {
         if (this.userPreferences.unitOfLength === null || this.userPreferences.unitOfLength === undefined || this.userPreferences.unitOfLength === "") return "km";
         return this.userPreferences.unitOfLength;
     }
 
     getUnitLengthValuesToManageInLayout()
     {
-        //Unit of length options (get correct value from preferences)
+        // Unit of length options (get correct value from preferences)
         if (this.userPreferences.unitOfLength === 'km') return [true, false];
         return [false, true];
     }

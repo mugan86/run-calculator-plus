@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController, MenuController } from 'ionic-angular';
-import { TranslateService } from 'ng2-translate';
+import { LanguageConfigService } from 'ng-2-4-language-config';
 import { SettingsService } from "./../../services/settings";
 
 
@@ -11,7 +11,7 @@ import { SettingsService } from "./../../services/settings";
 })
 export class MenuPrincipal {
   selectColor = "violet";
-  constructor(public navCtrl: NavController, public translate: TranslateService, 
+  constructor(public navCtrl: NavController, public translate: LanguageConfigService, 
               private menuCtrl: MenuController, private settings: SettingsService) {
     //Active menu
     this.menuCtrl.enable(true);
@@ -29,7 +29,7 @@ export class MenuPrincipal {
       //Finish to view welcome page and reload only this time
       window.location.reload();
     }
-    translate.setDefaultLang(settings.getSelectLanguage());
+    translate.useSelectLanguage(settings.getSelectLanguage());
 
     this.selectColor = settings.getTheme().id;
   }
