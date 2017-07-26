@@ -60,7 +60,7 @@ import { SettingsService } from './../services/settings';
       modalEnter: 'modal-slide-in',
       modalLeave: 'modal-slide-out',
       
-    }, {}
+    }
   ),
     LanguageConfigModule.forRoot()
   ],
