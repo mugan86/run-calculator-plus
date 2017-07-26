@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-import { TranslateService } from 'ng2-translate';
+import { LanguageConfigService } from 'ng-2-4-language-config';
 
 import { SettingsService } from "./../../services/settings";
 
@@ -12,8 +12,8 @@ import { SettingsService } from "./../../services/settings";
 export class Page1 {
   
   selectColor = "twitter";
-  constructor(public navCtrl: NavController, public translate: TranslateService, private settings: SettingsService,) {
-    translate.setDefaultLang(settings.getSelectLanguage());
+  constructor(public navCtrl: NavController, public translate: LanguageConfigService, private settings: SettingsService,) {
+    translate.useSelectLanguage(settings.getSelectLanguage());
     
   }
 

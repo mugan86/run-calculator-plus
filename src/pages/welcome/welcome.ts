@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, MenuController, Events } from 'ionic-angular';
 import { MenuPrincipal } from './../menu-principal/menu-principal';
-import { TranslateService } from 'ng2-translate';
+import { LanguageConfigService } from 'ng-2-4-language-config/dist';
 import { ILanguage } from './../../interfaces/language';
 import { ITheme } from './../../interfaces/theme';
 import { ISettings } from './../../interfaces/settings';
@@ -30,14 +30,14 @@ export class WelcomePage {
   defaultLanguage: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-                public translate: TranslateService, private menuCtrl: MenuController,
+                public translate: LanguageConfigService, private menuCtrl: MenuController,
                 private settings: SettingsService, private events: Events) {
 
     //Disable Side menu
     this.menuCtrl.enable(false);
 
     this.initializeValues();
-    this.translate.setDefaultLang(this.language);
+    this.translate.useSelectLanguage(this.language);
 
     
     
@@ -91,7 +91,7 @@ export class WelcomePage {
   updateSelectLanguage()
   {
     if (this.settings.updateSelectLanguage(this.language)) {
-      this.translate.setDefaultLang(this.language);
+      this.translate.useSelectLanguage(this.language);
       this.initializeValues();
     }
   }

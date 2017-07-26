@@ -1,9 +1,11 @@
 import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
-import { TranslateModule, TranslateLoader } from 'ng2-translate/ng2-translate';
+/*import { TranslateModule, TranslateLoader } from 'ng2-translate/ng2-translate';
 import { createTranslateLoader } from './../services/translate-loader';
-import { Http } from '@angular/http';
+import { Http } from '@angular/http';*/
+
+import { LanguageConfigModule } from 'ng-2-4-language-config/dist';
 
 import { MyApp } from './app.component';
 
@@ -60,11 +62,7 @@ import { SettingsService } from './../services/settings';
       
     }, {}
   ),
-    TranslateModule.forRoot({
-      provide: TranslateLoader,
-      useFactory: (createTranslateLoader),
-      deps: [Http]
-    })
+    LanguageConfigModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

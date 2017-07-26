@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter} from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
-import { TranslateService } from 'ng2-translate';
+import { LanguageConfigService } from 'ng-2-4-language-config';
 
 //Models / Interfaces
 import { ILanguage } from './../../interfaces/language';
@@ -39,13 +39,13 @@ export class SettingsPage {
   userPreferences: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-  public translate: TranslateService, private settings: SettingsService, private events: Events) {
+  public translate: LanguageConfigService, private settings: SettingsService, private events: Events) {
     this.initializeValues();
     this.selectLanguage();
   }
 
   selectLanguage() {
-    this.translate.setDefaultLang(this.language);
+    this.translate.useSelectLanguage(this.language);
   }
 
   //TODO optimize correctly preferences values
